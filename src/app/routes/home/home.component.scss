@@ -6,3 +6,112 @@
   position: relative;
   top: -113px;
 }
+
+.ltk-text {
+  color: #fff;
+}
+
+.ltk-icon {
+  font-size: 100px;
+  color: #fff;
+}
+
+.ltk-ct-icon {
+  font-size: 50px;
+  color: #fff;
+}
+
+.btn-ltk {
+  background: transparent !important;
+  border: none;
+  color: #231f20;
+
+  &:focus,
+  &:active,
+  &:hover {
+    transition-duration: 0.2s;
+    background: #52b19b !important;
+    border: none !important;
+    box-shadow: 13px 13px 50px -24px #52b19b !important;
+  }
+}
+
+.hidden-text {
+  .middle {
+    position: relative;
+    margin-top: 375px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .text {
+    color: #fff;
+    font-size: 60px;
+    font-family: "montserrat";
+    cursor: pointer;
+  }
+  .hidden {
+    opacity: 1;
+    transition: 0.5s ease-in;
+  }
+  .text:hover .hidden {
+    opacity: 1;
+    max-width: 1em;
+  }
+
+  .bold {
+    font-weight: bold;
+    font-size: 75px !important;
+  }
+}
+
+.text-middle {
+  transform: translate(5%, -50%) skewY(-5deg);
+}
+
+.ltk-contact-home {
+  h1 {
+    color: #fff;
+  }
+}
+
+.ltk-why {
+  h1 {
+    color: #fff;
+  }
+}
+
+.ltk-why-choose {
+  .card {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: #fff;
+    height: 290px;
+
+    &:hover {
+      transition-duration: .2s;
+      background: #289580 ;
+      box-shadow: 13px 13px 50px -24px #289580;
+    }
+  }
+
+  button {
+    background: transparent;
+    border: none;
+
+    &:focus,
+    &:active,
+    &:hover {
+      transition-duration: 0.2s;
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .ltk-why-icon {
+    color: white;
+    font-size: 60px;
+  }
+}

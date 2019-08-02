@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  isHidden = true;
+
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.isHidden = false;
+    }, 3000)
   }
+
 
 }

@@ -2,6 +2,7 @@
   nav {
     background: transparent;
     z-index: 1;
+    top: 10px;
   }
 
   .ltk-logo {
@@ -11,13 +12,36 @@
   .ltk-nav-link {
     font-size: 1.2rem;
     a {
-      color: white !important;
+      color: white;
 
       &:focus,
       &:active,
       &:hover {
-          border-bottom: 1px white solid;
-          transition-duration: .3s;
+        border-bottom: 1px white solid;
+        transition-duration: 0.3s;
+      }
+    }
+  }
+}
+
+.scrolled {
+  position: fixed;
+  background: #ffffff !important;
+  width: 100%;
+  top: 0 !important;
+  transition-duration: 0.3s;
+  box-shadow: 13px 13px 50px -24px #106e56;
+
+  .ltk-nav-link {
+    font-size: 1.2rem;
+    a {
+      color: #106e56;
+
+      &:focus,
+      &:active,
+      &:hover {
+        border-bottom: 1px #106e56 solid;
+        transition-duration: 0.3s;
       }
     }
   }

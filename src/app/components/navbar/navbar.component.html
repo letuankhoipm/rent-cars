@@ -1,5 +1,5 @@
 <div class="ltk-navbar">
-  <nav class="navbar navbar-expand-lg navbar-dark   ">
+  <nav class="navbar navbar-expand-lg navbar-dark" id="ltk-nav" [class.scrolled]="scrolled" [class.awake]="awake">
       <a class="navbar-brand ml-3" href="#">
         <img [src]="ltkLogo" class="ltk-logo" alt="">
       </a>
@@ -18,9 +18,6 @@
               </li>
               <li class="nav-item  mx-4 ltk-nav-link">
                   <a class="nav-link p-0" href="#">About</a>
-              </li>
-              <li class="nav-item  mx-4 ltk-nav-link">
-                  <a class="nav-link p-0" href="#">Blog</a>
               </li>
               <li class="nav-item  mx-4 ltk-nav-link">
                   <a class="nav-link p-0" href="#">Contact</a>
