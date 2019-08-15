@@ -1,0 +1,41 @@
+footer {
+  background: #0f5240;
+  padding-top: 100px;
+
+  .footer-copyright {
+    background: #231f20 !important;
+  }
+
+  .wooden {
+    position: relative;
+    width: 100%;
+  }
+
+  input {
+    padding: 10px;
+    width: 35%;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 2px 3px 50px -29px #52b19b !important;
+  }
+
+  .btn-news {
+    background: #52b19b;
+    color: white;
+    position: relative;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 30px;
+    padding-right: 30px;
+    top: -2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+.newsletter {
+  position: relative;
+  top: -50px;
+  box-shadow: 2px 3px 50px -29px #52b19b !important;
+}

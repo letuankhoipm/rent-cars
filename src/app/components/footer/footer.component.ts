@@ -9,6 +9,9 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
+  public ltkLogo = 'assets/logo/tuankhoilogo.png';
+  public wooden = 'assets/images/wooden.png';
+
   ngOnInit() {
   }
 

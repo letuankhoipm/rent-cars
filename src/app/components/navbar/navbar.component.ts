@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
 
   public scrolled: boolean = false;
   public awake: boolean = false;
-  public  display: boolean = false;
+  public display: boolean = false;
   public ltkLogo = 'assets/logo/tuankhoilogo.png';
 
   @HostListener("window:scroll", [])
@@ -29,6 +29,14 @@ export class NavbarComponent implements OnInit {
         this.display = false;
       }
     }
+  }
+
+  scrollTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   ngOnInit() {
