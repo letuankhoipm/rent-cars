@@ -1,6 +1,6 @@
 <div class="ltk-navbar">
     <nav class="navbar navbar-expand-lg navbar-dark" id="ltk-nav" [class.scrolled]="scrolled" [class.awake]="awake">
-        <a class="navbar-brand ml-3" href="#">
+        <a class="navbar-brand ml-3" [routerLink]="['/']">
             <img [src]="ltkLogo" class="ltk-logo" alt="">
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
@@ -8,13 +8,13 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-4 ">
                 <li class="nav-item active mx-4 ltk-nav-link">
-                    <a class="nav-link p-0" href="#">Home</a>
+                    <a class="nav-link p-0" [routerLink]="['/']">Home</a>
                 </li>
                 <li class="nav-item  mx-4 ltk-nav-link">
-                    <a class="nav-link p-0" href="#">About me</a>
+                    <a class="nav-link p-0" [routerLink]="['/about-me']">About me</a>
                 </li>
                 <li class="nav-item  mx-4 ltk-nav-link">
-                    <a class="nav-link p-0" href="#">Contact</a>
+                    <a class="nav-link p-0" [routerLink]="['/']">Contact</a>
                 </li>
             </ul>
         </div>

@@ -26,7 +26,7 @@
 
 .scrolled {
   position: fixed;
-  background: #ffffff !important;
+  background: rgba(32, 32, 32, 0.6) !important;
   width: 100%;
   top: 0 !important;
   transition-duration: 0.3s;
@@ -35,12 +35,9 @@
   .ltk-nav-link {
     font-size: 1.2rem;
     a {
-      color: #106e56;
-
       &:focus,
       &:active,
       &:hover {
-        border-bottom: 1px #106e56 solid;
         transition-duration: 0.3s;
       }
     }

@@ -11,10 +11,10 @@ const routes: Routes = [
                 path: '',
                 loadChildren: "../../routes/home/home.module#HomeModule"
             },
-            // {
-            //     path: 'contact',
-            //     loadChildren: "../../routes/contact/contact.module#ContactModule"
-            // },
+            {
+                path: 'about-me',
+                loadChildren: "../../routes/about-me/about-me.module#AboutMeModule"
+            },
             // {
             //     path: 'place',
             //     loadChildren: "../../routes/place/place.module#PlaceModule"

@@ -22,7 +22,6 @@ export class NavbarComponent implements OnInit {
       this.scrolled = window.scrollY > 30;
       this.awake = window.scrollY > 100;
       if (window.scrollY > 30) {
-        this.ltkLogo = '/assets/logo/tuankhoilogo-color.png';
         this.display = true;
       } else {
         this.ltkLogo = '/assets/logo/tuankhoilogo.png';
