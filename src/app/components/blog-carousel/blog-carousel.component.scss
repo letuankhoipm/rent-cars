@@ -28,14 +28,12 @@
       width: 50px;
       background: transparent !important;
       border-radius: 50%;
-      border: 2px solid #52b19b !important;
+      border: transparent !important;
       box-shadow: 2px 3px 50px -29px #52b19b !important;
 
       &:focus,
       &:hover,
       &:active {
-        transition-duration: 0.3s;
-        background: #ffffff !important;
         outline: none;
       }
 
@@ -52,14 +50,12 @@
       width: 50px;
       background: transparent !important;
       border-radius: 50%;
-      border: 2px solid #52b19b !important;
+      border: transparent !important;
       box-shadow: 2px 3px 50px -29px #52b19b !important;
 
       &:focus,
       &:hover,
       &:active {
-        transition-duration: 0.3s;
-        background: #ffffff !important;
         outline: none;
       }
 

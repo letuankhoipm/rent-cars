@@ -1,5 +1,7 @@
 footer {
-  background: #0f5240;
+  // background: #0f5240;
+  background-image: linear-gradient(to right, #003b30 , #289580);
+
   padding-top: 100px;
 
   .footer-copyright {
@@ -32,10 +34,27 @@ footer {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
   }
+
+  .btn-ltk-footer {
+    background: transparent !important;
+    border: none;
+    color: white;
+
+    i {
+      font-size: 35px;
+    }
+
+    &:focus,
+    &:active,
+    &:hover {
+      transition-duration: 0.2s;
+      background: #52b19b !important;
+      border: none !important;
+      box-shadow: 13px 13px 50px -24px #52b19b !important;
+    }
+  }
 }
 
 .newsletter {
-  position: relative;
-  top: -50px;
-  box-shadow: 2px 3px 50px -29px #52b19b !important;
+  padding-bottom: 80px;
 }

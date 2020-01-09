@@ -19,18 +19,18 @@ export class BlogCarouselComponent implements OnInit {
       time: '15:03:00 Aug, 04 2019'
     },
     {
-      img: 'assets/images/react.png',
-      title: 'Some cool React tips and tricks',
-      descript: `After spending some time with React, I've learned a few nice tips and tricks to make your app as composable, declarative and maintainable as possible.`,
-      tech: 'Javascript',
-      time: '15:03:00 Jul, 09 2019'
-    },
-    {
       img: 'assets/images/node.png',
       title: 'Build A RESTful Api With Node.js And Express.Js',
       descript: `In this tutorial, we’ll be learning how to build a Rest API in Node.js and Express.js by building a simple todo app API. This tutorial assumes an intermediate knowledge of javascript and experience working on the command line. The source code for the final project can be found here .
       Getting Started`,
       tech: 'NodeJs',
+      time: '15:03:00 Jul, 09 2019'
+    },
+    {
+      img: 'assets/images/react.png',
+      title: 'Some cool React tips and tricks',
+      descript: `After spending some time with React, I've learned a few nice tips and tricks to make your app as composable, declarative and maintainable as possible.`,
+      tech: 'Javascript',
       time: '15:03:00 Jul, 09 2019'
     },
   ]
@@ -42,7 +42,7 @@ export class BlogCarouselComponent implements OnInit {
     mouseDrag: false,
     center: true,
     slideBy: 1,
-    autoplay: false,
+    autoplay: true,
     nav: true,
     navClass: ['owl-prev', 'owl-next'],
     dotsEach: true,
@@ -54,7 +54,7 @@ export class BlogCarouselComponent implements OnInit {
         items: 1
       },
       920: {
-        items: 3
+        items: 2.9
       },
     }
   };

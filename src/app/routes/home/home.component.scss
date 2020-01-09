@@ -91,7 +91,8 @@
 
     &:hover {
       transition-duration: .2s;
-      background: #289580 ;
+      background: #289580;
+      // background-image: linear-gradient(to right, #003b30 , #289580);
       box-shadow: 13px 13px 50px -24px #289580;
     }
   }

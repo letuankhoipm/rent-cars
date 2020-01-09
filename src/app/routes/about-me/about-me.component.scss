@@ -1,14 +1,12 @@
 .ltk-about-me-headline {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .ltk-banner {
   height: 300px;
   position: relative;
   color: white;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background: no-repeat center center;
 
   &::before {
     content: "";
@@ -22,80 +20,145 @@
   }
 
   .ltk-banner-shadow {
-    background-image: url("../../../assets/images/work.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url("/assets/images/work.jpg") no-repeat;
   }
 }
 
-.ltk-hl {
-  font-weight: bold;
-  color: #52b19b;
-  margin-right: 20px;
-}
-
-.ltk-avatar {
-
-  p {
-    font-size: 25px;
+.ltk-frame {
+  .main-frame,
+  .contact-frame {
+    background-image: linear-gradient(to right, #003b30, #289580);
+    box-shadow: 13px 13px 50px -24px #106e56;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
-  .card {
-    cursor: pointer;
-    box-shadow: 13px 13px 50px -24px #52b19b !important;
-    width: 360px;
-    height: 475px;
+
+  .main-frame-2 {
+    background-image: linear-gradient(to right, #289580, #003b30);
   }
-  .front,
-  .back {
+
+  .skill-frame {
+    padding: 20px;
+    border-radius: 20px;
+    top: -410px;
+    right: 20px;
+    background: #231f20;
+    box-shadow: 13px 13px 50px -24px #106e56;
+  }
+
+  .experience-frame,
+  .edu-frame,
+  .hobbie-frame {
+    border-radius: 20px;
+    background: white;
+    box-shadow: 13px 13px 50px -24px #106e56;
+  }
+
+  .hobbie-frame,
+  .edu-frame {
+    padding: 20px;
+  }
+
+  .avatar-img {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    transition: transform 0.6s linear;
+    border-radius: 10px;
   }
-  .front img {
-    height: 100%;
-  }
-  .front {
-    transform: perspective(600px) rotateY(0deg);
-  }
-  .back {
-    background: #f1f1f1;
-    transform: perspective(600px) rotateY(180deg);
-  }
-  .back-content {
-    padding-top: 200px;
-    color: #2c3e50;
-    text-align: center;
-    width: 100%;
 
-    a {
-      text-decoration: none;
+  .first-name,
+  .last-name {
+    color: white;
+    font-weight: bold;
+    font-size: 2.5em;
+  }
+
+  .btn-job-infor {
+    background: #231f20;
+    color: white;
+    font-weight: bold;
+    border-radius: 35px;
+
+    &:active,
+    &:focus {
+      box-shadow: none;
+      outline: none;
     }
   }
-  .sm {
-    margin: 20px 0;
-  }
-  .sm a {
-    display: inline-flex;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    color: #2c3e50;
-    font-size: 18px;
-    transition: 0.1s;
+
+  .btn-skill {
+    width: 60px;
+    background: white;
+    padding: 13px;
     border-radius: 50%;
   }
-  .sm a:hover {
-    background: #2c3e50;
+
+  .btn-skill-2 {
+    width: 60px;
+    background: white;
+    font-size: 29px;
+    border-radius: 50%;
+  }
+
+  .btn-exp {
+    font-size: 12px;
+    transform: rotate(-90deg);
+    position: relative;
+    top: 30px;
+    background-image: linear-gradient(to right, #003b30, #289580);
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+
+    &:active,
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .btn-edu {
+    font-size: 12px;
+    background-image: linear-gradient(to right, #003b30, #289580);
+    width: 120px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+
+    &:active,
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .contact-icon {
+    font-size: 30px;
     color: white;
   }
-  .card:hover > .front {
-    transform: perspective(600px) rotateY(-180deg);
+
+  .hobbie-icon {
+    color: #106e56;
+    font-size: 60px;
   }
-  .card:hover > .back {
-    transform: perspective(600px) rotateY(0deg);
+
+  .exp-mg {
+    padding: 20px 40px 20px 20px;
+  }
+
+  .exp-title,
+  .edu-title,
+  .hobbie-title {
+    font-weight: bold;
+    color: #0f5240;
+  }
+
+  .exp-job {
+    color: #106e56;
+    span {
+      color: black !important;
+    }
+  }
+
+  .exp-infor {
+    border-bottom: solid 1px #cccccc;
   }
 }

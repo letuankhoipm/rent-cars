@@ -12,10 +12,16 @@ export class ListWorkComponent implements OnInit {
 
   public workCards = [
     {
+      img: 'assets/images/deluxe.png',
+      title: 'De Luxe',
+      tech: 'Angular 6',
+      descript: 'De Luxe is an musical demonstration website with the famous classic of Vivaldi - Four Season'
+    },
+    {
       img: 'assets/images/phimdee.png',
       title: 'Phim Dee',
       tech: 'Angular 6',
-      descript: 'The PhimDee allows you to objectively track and analyse your martial arts performance when used together with the CS-Paddle and Ludus ID Wristband.'
+      descript: 'The PhimDee the world of leading internet entertainment service with 158 million paid memberships in over 190 countries enjoying TV series, documentaries and film'
     },
     {
       img: 'assets/images/ludus.png',
@@ -40,12 +46,6 @@ export class ListWorkComponent implements OnInit {
       title: 'Harvee',
       tech: 'React JS',
       descript: 'Harvee is an application that was meant to students to take online classes and for teachers to teach those classes.'
-    },
-    {
-      img: 'assets/images/deluxe.png',
-      title: 'De Luxe',
-      tech: 'Angular 6',
-      descript: 'De Luxe is an application that was meant to students to take online classes and for teachers to teach those classes.'
     },
     {
       img: 'assets/images/nhanviet.png',

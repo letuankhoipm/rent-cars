@@ -4,7 +4,8 @@
   z-index: 2;
   position: fixed;
   top: 0px !important;
-  background: url(/assets/images/bg.jpg);
+  // background: url(/assets/images/bg.jpg);
+  background-color: rgba(32, 32, 32, 0.8);
   background-position: 50% 50%;
   background-size: 140%;
   animation: vanish 0.5s ease-in-out forwards 3.5s;
@@ -12,7 +13,7 @@
 
 #intro-svg {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, 10%);
   animation: vanish 0.5s ease-in-out forwards 3s;
