@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   public scrolled: boolean = false;
   public awake: boolean = false;
   public display: boolean = false;
+  public stretching: boolean = false;
   public ltkLogo = 'assets/logo/tuankhoilogo.png';
 
   @HostListener("window:scroll", [])
@@ -36,6 +37,14 @@ export class NavbarComponent implements OnInit {
       left: 0,
       behavior: 'smooth'
     });
+  }
+
+  showMobileNav() {
+    this.stretching = !this.stretching;
+  }
+
+  hiddenMobileNav() {
+    this.stretching = !this.stretching;
   }
 
   ngOnInit() {

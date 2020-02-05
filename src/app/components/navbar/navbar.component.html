@@ -1,24 +1,77 @@
-<div class="ltk-navbar">
-    <nav class="navbar navbar-expand-lg navbar-dark" id="ltk-nav" [class.scrolled]="scrolled" [class.awake]="awake">
+<div class="ltk-navbar d-none d-sm-block">
+    <nav class="navbar navbar-expand-lg navbar-dark py-0" id="ltk-nav" [class.scrolled]="scrolled"
+        [class.awake]="awake">
         <a class="navbar-brand ml-3" [routerLink]="['/']">
-            <img [src]="ltkLogo" class="ltk-logo" alt="">
+            <h1 class="text-blue font-weight-bold">LUCIEN ROUX</h1>
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
             aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-4 ">
+            <ul [class.navhidden]="display" class="navbar-nav ml-auto mt-2 mt-lg-0 mr-4" id="displayNav">
                 <li class="nav-item active mx-4 ltk-nav-link">
-                    <a class="nav-link p-0" [routerLink]="['/']">Home</a>
+                    <a class="nav-link p-0" [routerLink]="['/']"><i class="far fa-envelope"></i>
+                        letuankhoi.dev@gmail.com
+                    </a>
                 </li>
                 <li class="nav-item  mx-4 ltk-nav-link">
-                    <a class="nav-link p-0" [routerLink]="['/about-me']">About me</a>
+                    <a class="nav-link p-0" [routerLink]="['/about-me']"><i class="far fa-phone"></i>
+                        +84 965 469 403
+                    </a>
                 </li>
-                <li class="nav-item  mx-4 ltk-nav-link">
-                    <a class="nav-link p-0" [routerLink]="['/']">Contact</a>
+            </ul>
+            <ul [class.navdisplay]="display" class="navbar-nav ml-auto mt-2 mt-lg-0 mr-4" id="hiddenNav">
+                <li class="nav-item ltk-nav-link">
+                    <a class="nav-link p-0" [routerLink]="['/']">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item ltk-nav-link">
+                    <a class="nav-link p-0" [routerLink]="['/about-me']">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item ltk-nav-link">
+                    <a class="nav-link p-0" [routerLink]="['/about-me']">
+                        Contact
+                    </a>
                 </li>
             </ul>
         </div>
     </nav>
+</div>
+
+<div class="ltk-navbar-mobile d-block d-sm-none">
+    <div class="navbar navbar-mb py-0 w-100 position-fixed" [class.scrolled]="scrolled" [class.awake]="awake">
+        <div class="row w-100">
+            <div [class.icon-flow]="stretching" class="col-10 p-0 non-flow">
+                <a (click)="hiddenMobileNav()" class="navbar-brand ml-3" [routerLink]="['/']">
+                    <h1 class="text-blue font-weight-bold">LR</h1>
+                </a>
+            </div>
+            <div (click)="showMobileNav()" [class.icon-flow]="stretching" class="col-2 p-0 non-flow text-right">
+                <i style="font-size: 30px;" class="fas fa-bars pt-3"></i>
+            </div>
+            <div [class.on-stretch]="stretching" class="col-12 position-fixed non-stretch">
+                <ul class="navbar-list-mb list-group ml-auto mt-2 mt-lg-0 mr-4 pr-4 text-right text-uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/']">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" [routerLink]="['/about-me']">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/about-me']">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div [class.display]="display" (click)="scrollTop()" id="backToTopBtn" title="Go to top">

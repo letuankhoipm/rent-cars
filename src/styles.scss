@@ -1,14 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/scss/bootstrap.scss";
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import "src/assets/scss/variables";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
 @import "assets/fontawesome/css/all.css";
 
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 body {
-  background-color: #231f20 !important;
+  background-color: white !important;
 }
 
 .ltk-line {
@@ -17,8 +18,8 @@ body {
   margin-left: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: #fff;
-  box-shadow: 13px 13px 50px -24px #52b19b;
+  background: $deepblue;
+  box-shadow: 13px 13px 50px -24px $deepblue;
 }
 
 .ltk-line-right {
@@ -29,8 +30,8 @@ body {
   margin-left: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: #fff;
-  box-shadow: 13px 13px 50px -24px #52b19b;
+  background: $deepblue;
+  box-shadow: 13px 13px 50px -24px $deepblue;
 }
 
 .row-reverse {
@@ -42,14 +43,13 @@ body {
 
 .btn-general {
     padding: 10px 20px 10px 20px !important;
-    border-radius: 35px !important;
-    box-shadow: 13px 13px 50px -24px #52b19b !important;
+    box-shadow: 13px 13px 50px -24px $blue !important;
     color: #ffffff !important;
-    border: #ffffff solid 1px !important;
-    background: transparent;
+    background: $deepblue !important;
 
     &:hover {
         background: #ffffff !important;
         color: #231f20 !important;
+        border: black solid 1px !important;
     }
 }

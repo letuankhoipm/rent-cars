@@ -1,18 +1,16 @@
+@import "src/assets/scss/variables";
 
 .ltk-text-animate {
     
     ul {
         position: relative;
-        top: 60px;
-        left: 50%;
-        transform: translate(-27%, -85%) skewY(0deg);
         display: flex;
         margin: 0;
         padding: 0;
-        background: #106e56;
+        background: $blue;
         border-radius: 5px;
         border: #fff solid 10px;
-        box-shadow: 13px 13px 50px -24px #52b19b;
+        box-shadow: -24px 13px 50px -24px $blue;
     }
 
     li {
@@ -20,7 +18,7 @@
         list-style: none;
         color: #fff;
         padding: 0 10px;
-        font-size: 1em;
+        font-size: 3em;
         font-weight: bold;
         // text-transform: uppercase;
         animation: animate 3s linear infinite;

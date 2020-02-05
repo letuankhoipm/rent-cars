@@ -1,73 +1,56 @@
+@import "src/assets/scss/variables";
+
 .ltk-home {
-  height: 100vh;
-  background: url("/assets/images/bg.jpg");
-  background-size: contain;
-  background-position: center;
   position: relative;
-  top: -113px;
 }
 
 .ltk-text {
-  color: #fff;
+  color: black;
 }
 
 .ltk-icon {
   font-size: 100px;
-  color: #fff;
-}
-
-.ltk-ct-icon {
-  font-size: 50px;
-  color: #fff;
-}
-
-.btn-ltk {
-  background: transparent !important;
-  border: none;
-  color: #231f20;
+  color: $blue;
 
   &:focus,
   &:active,
   &:hover {
     transition-duration: 0.2s;
-    background: #52b19b !important;
-    border: none !important;
-    box-shadow: 13px 13px 50px -24px #52b19b !important;
+    color: white !important;
   }
 }
 
-.hidden-text {
-  .middle {
-    position: relative;
-    margin-top: 375px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .text {
-    color: #fff;
-    font-size: 60px;
-    font-family: "montserrat";
-    cursor: pointer;
-  }
-  .hidden {
-    opacity: 1;
-    transition: 0.5s ease-in;
-  }
-  .text:hover .hidden {
-    opacity: 1;
-    max-width: 1em;
-  }
+.ltk-ct-icon {
+  font-size: 50px;
+  color: $blue;
 
-  .bold {
-    font-weight: bold;
-    font-size: 75px !important;
+  &:focus,
+  &:active,
+  &:hover {
+    transition-duration: 0.2s;
+    color: white !important;
   }
 }
 
-.text-middle {
-  transform: translate(5%, -50%) skewY(-5deg);
+.txt-animante {
+  padding-top: 150px;
 }
+
+.btn-ltk {
+  background: transparent !important;
+  border: none;
+
+  &:focus,
+  &:active,
+  &:hover {
+    transition-duration: 0.2s;
+    background: $blue !important;
+    border: 1px solid black !important;
+    box-shadow: 13px 13px 50px -24px $blue !important;
+  }
+}
+
+
 
 .ltk-contact-home {
   h1 {
@@ -90,10 +73,11 @@
     height: 290px;
 
     &:hover {
-      transition-duration: .2s;
-      background: #289580;
+      transition-duration: 0.2s;
+      color: #fff;
+      background: $blue;
       // background-image: linear-gradient(to right, #003b30 , #289580);
-      box-shadow: 13px 13px 50px -24px #289580;
+      box-shadow: 13px 13px 50px -24px $blue;
     }
   }
 
