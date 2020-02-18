@@ -1,7 +1,8 @@
+@import "src/assets/scss/variables";
+
 footer {
   // background: #0f5240;
-  background-image: linear-gradient(to right, #003b30 , #289580);
-
+  background: $blue;
   padding-top: 100px;
 
   .footer-copyright {
@@ -48,9 +49,9 @@ footer {
     &:active,
     &:hover {
       transition-duration: 0.2s;
-      background: #52b19b !important;
+      background: $blue !important;
       border: none !important;
-      box-shadow: 13px 13px 50px -24px #52b19b !important;
+      box-shadow: 13px 13px 50px -24px $blue !important;
     }
   }
 }

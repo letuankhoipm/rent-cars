@@ -31,31 +31,28 @@
     color: white !important;
   }
 }
-
-.txt-animante {
-  padding-top: 150px;
+@media (min-width: 768px) {
+  .txt-animante {
+    padding-top: 150px;
+  }
 }
 
 .btn-ltk {
-  background: transparent !important;
+  background: white !important;
   border: none;
 
   &:focus,
   &:active,
   &:hover {
     transition-duration: 0.2s;
+    color: white !important;
     background: $blue !important;
-    border: 1px solid black !important;
     box-shadow: 13px 13px 50px -24px $blue !important;
   }
 }
 
-
-
-.ltk-contact-home {
-  h1 {
-    color: #fff;
-  }
+.ltk-social-media {
+  background: $blue;
 }
 
 .ltk-why {
@@ -64,19 +61,34 @@
   }
 }
 
+.ltk-carousel {
+  background: $blue;
+}
+
+.ltk-friendly {
+  h1 {
+    color: $blue;
+  }
+}
+
+.ltk-sologan {
+  h1 {
+    color: $blue;
+  }
+}
+
 .ltk-why-choose {
   .card {
     cursor: pointer;
     background: transparent;
     border: none;
-    color: #fff;
+    color: $blue;
     height: 290px;
 
     &:hover {
       transition-duration: 0.2s;
       color: #fff;
       background: $blue;
-      // background-image: linear-gradient(to right, #003b30 , #289580);
       box-shadow: 13px 13px 50px -24px $blue;
     }
   }
@@ -96,7 +108,7 @@
   }
 
   .ltk-why-icon {
-    color: white;
+    color: $blue;
     font-size: 60px;
   }
 }

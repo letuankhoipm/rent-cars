@@ -1,8 +1,11 @@
+@import "src/assets/scss/variables";
+
 .ltk-work {
   .card {
     cursor: pointer;
+    border: none !important;
     height: 470px;
-    box-shadow: 2px 3px 50px -29px #52b19b;
+    box-shadow: 2px 3px 50px -29px white;
     background: transparent;
     color: white;
     opacity: 0.5;
@@ -24,11 +27,15 @@
   }
 
   .card-title {
-    color: #52b19b;
+    border-radius: 5px;
+    background: white;
+    color: $blue;
   }
 
   .icon {
     position: absolute;
+    right: 50px;
+    width: 250px;
   }
 
   .hover {
@@ -40,8 +47,8 @@
 
   .read-more {
     i {
-      font-size: 35px;
-      color: #52b19b ;
+      font-size: 35px; 
+      color: $blue ;
     }
   }
 }
