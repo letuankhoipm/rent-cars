@@ -1,0 +1,30 @@
+@import "src/assets/scss/variables";
+
+.ltk-detail {
+  position: relative;
+  height: 900px;
+  width: 100%;
+  top: -150px;
+  background-color: white;
+  border-radius: 5px;
+  border: solid 1px $blue;
+}
+
+@media (max-width: 768px) {
+  .ltk-detail {
+    height: auto;
+  }
+}
+
+.ltk-detail-title {
+  font-size: 3rem;
+}
+
+.ltk-detail-link {
+  font-size: 1.2rem;
+}
+
+.ltk-background-detail {
+  background-size: cover !important;
+  background-position: center !important;
+}

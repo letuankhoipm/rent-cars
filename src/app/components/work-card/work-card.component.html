@@ -1,19 +1,17 @@
 <div class="ltk-work my-2">
   <div class="card text-left">
-    <div class="hover">
+    <div *ngIf="isHidden" class="hover">
 
     </div>
-    <img class="icon" src="assets/logo/tuankhoilogo-icon.png" alt="#">
-    <img class="card-img-top" [src]="card.img" alt="">
-    <div class="card-body mt-4">
-      <span class="badge badge-light mb-2">{{card.tech}}</span>
-      <h4 class="card-title p-2">{{card.title}}</h4>
+    <img *ngIf="isHidden" class="icon" src="assets/logo/tuankhoilogo-icon.png" alt="#">
+    <img class="card-img-top" [src]="card.imgUrl" alt="">
+    <div class="card-body mt-2">
+      <span *ngFor="let platform of platforms" class="badge badge-light mb-2 mr-2">{{platform}}</span>
+      <h4 class="card-title p-2">{{card.name}}</h4>
       <p class="card-text">
-        {{card.descript}}
+        {{card.description}}
       </p>
-      <span class="read-more float-right">
-        <i class="far fa-ellipsis-h"></i>
-      </span>
+     <button [routerLink]="['/porfolio', card?.id]" routerLinkActive="router-link-active"  class="btn float-right bg-light">Read more</button>
     </div>
   </div>
 </div>

@@ -1,61 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss']
+  styleUrls: ['./about-me.component.scss'],
+  providers: [UserService]
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  edus = [
-    {
-      job: 'DB Analysic',
-      uni: 'UIT VNU',
-      nation: 'Vietnam',
-      content: 'Accomplished website developer and information system with 2 years of experience in development of Website applications.',
-      years: '2017-22'
-    },
-    {
-      job: 'Design',
-      uni: 'Tokyo Homing',
-      nation: 'Japan',
-      content: 'Accomplished design and UI/UX with 2 month training in Japan.',
-      years: '2018-19'
-    },
-  ];
-
-  exps = [
-    {
-      job: 'web developer',
-      nation: 'Vietnam',
-      years: '2017-2018',
-      content: 'Accomplished website developer with 2 years of experience in development of Website applications.'
-    },
-    {
-      job: 'designer',
-      nation: 'Vietnam',
-      years: '2017-2018',
-      content: 'Accomplished design with 2 years of experience in Photoshop.'
-    },
-    {
-      job: 'infor sys engineer',
-      nation: 'Vietnam',
-      years: '2017-2022',
-      content: 'Accomplished information system with 2 years of experience in development of Website applications.'
-    },
-    {
-      job: 'design assistant',
-      nation: 'Vietnam',
-      years: '2016-2017',
-      content: 'Assistant design and support design at Ai and Pts section.'
-    },
-  ]
-
+  constructor(private userService: UserService) { }
+  edus = [];
+  exps = [];
+  skills = [];
+  langs = [];
+  user: any;
   hobbies = [
     {
       icon: '<i class="fas fa-gamepad"></i>',
@@ -63,11 +22,11 @@ export class AboutMeComponent implements OnInit {
     },
     {
       icon: '<i class="fas fa-music"></i>',
-      name: 'Music'
+      name: 'Guitar'
     },
     {
       icon: '<i class="fas fa-futbol"></i>',
-      name: 'Sports'
+      name: 'Soccer'
     },
     {
       icon: `<i class="fas fa-book"></i>`,
@@ -82,5 +41,19 @@ export class AboutMeComponent implements OnInit {
       name: 'Design'
     },
   ]
+
+  ngOnInit() {
+    this.getUser();
+  }
+
+  getUser = () => {
+    this.userService.getAlls().subscribe(user => {
+      this.user = user[0];
+      this.edus = this.user['education'];
+      this.exps = this.user['experience'];
+      this.skills = this.user['technique'];
+      this.langs = this.user['languages'];
+    });
+  }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TestService } from 'src/app/services/test.service';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   isHidden = true;
+  test: any;
 
-  constructor() { }
+  constructor(
+    public testServices: TestService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     setTimeout(() => {
       this.isHidden = false;
-    }, 3000)
+    }, 3000)   
   }
 
 

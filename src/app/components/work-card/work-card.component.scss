@@ -6,21 +6,22 @@
     border: none !important;
     height: 470px;
     box-shadow: 2px 3px 50px -29px white;
-    background: transparent;
+    background: $blue;
     color: white;
-    opacity: 0.5;
+    opacity: 1;
 
     &:hover {
-      transition-duration: 0.7s;
+      transition-duration: 0.4s;
       opacity: 1 !important;
 
       .hover {
-        transition-duration: 0.7s;
+        z-index: -1;
+        transition-duration: 0.4s;
         background-color: rgba(32, 32, 32, 0) !important;
       }
 
       .icon {
-        transition-duration: 0.7s;
+        transition-duration: 0.4s;
         opacity: 0;
       }
     }
@@ -34,8 +35,9 @@
 
   .icon {
     position: absolute;
-    right: 50px;
-    width: 250px;
+    right: 30%;
+    top: 25%;
+    width: 150px;
   }
 
   .hover {

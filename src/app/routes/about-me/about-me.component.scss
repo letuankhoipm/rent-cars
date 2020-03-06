@@ -1,9 +1,17 @@
+@import "src/assets/scss/variables";
+
 .ltk-about-me-headline {
   padding-top: 20px;
 }
 
+@media (max-width: 768px) {
+  .ltk-about-me-headline {
+    padding-top: 60px;
+  }
+}
+
 .ltk-banner {
-  height: 300px;
+  height: 100vh;
   position: relative;
   color: white;
   background: no-repeat center center;
@@ -27,23 +35,17 @@
 .ltk-frame {
   .main-frame,
   .contact-frame {
-    background-image: linear-gradient(to right, #003b30, #289580);
-    box-shadow: 13px 13px 50px -24px #106e56;
+    background: $blue;
+    box-shadow: 13px 13px 50px -24px $blue;
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  .main-frame-2 {
-    background-image: linear-gradient(to right, #289580, #003b30);
-  }
-
   .skill-frame {
-    padding: 20px;
+    padding: 15px;
     border-radius: 20px;
-    top: -410px;
-    right: 20px;
     background: #231f20;
-    box-shadow: 13px 13px 50px -24px #106e56;
+    box-shadow: 13px 13px 50px -24px $blue;
   }
 
   .experience-frame,
@@ -51,7 +53,7 @@
   .hobbie-frame {
     border-radius: 20px;
     background: white;
-    box-shadow: 13px 13px 50px -24px #106e56;
+    box-shadow: 13px 13px 50px -24px $blue;
   }
 
   .hobbie-frame,
@@ -102,8 +104,8 @@
     font-size: 12px;
     transform: rotate(-90deg);
     position: relative;
-    top: 30px;
-    background-image: linear-gradient(to right, #003b30, #289580);
+    top: 35px;
+    background: $blue;
     border-radius: 25px;
     color: white;
     font-weight: bold;
@@ -117,7 +119,7 @@
 
   .btn-edu {
     font-size: 12px;
-    background-image: linear-gradient(to right, #003b30, #289580);
+    background: $blue;
     width: 120px;
     border-radius: 25px;
     color: white;
@@ -136,23 +138,24 @@
   }
 
   .hobbie-icon {
-    color: #106e56;
+    color: $blue;
     font-size: 60px;
   }
 
-  .exp-mg {
-    padding: 20px 40px 20px 20px;
+  .exp-mg,
+  .skill-mg {
+    padding: 20px;
   }
 
   .exp-title,
   .edu-title,
   .hobbie-title {
     font-weight: bold;
-    color: #0f5240;
+    color: $blue;
   }
 
   .exp-job {
-    color: #106e56;
+    color: $blue;
     span {
       color: black !important;
     }

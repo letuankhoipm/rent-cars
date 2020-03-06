@@ -3,7 +3,7 @@
 .ltk-navbar {
   nav {
     background: transparent;
-    z-index: 1;
+    z-index: 1001;
     top: 10px;
   }
 
@@ -59,7 +59,7 @@
 }
 
 #hiddenNav {
-  z-index: 3;
+  z-index: 3000;
   opacity: 0;
 
   .nav-link {
@@ -85,7 +85,7 @@
   max-height: 40px;
   bottom: 25px;
   right: 10px;
-  z-index: 99;
+  z-index: 6000;
   outline: none;
   background: rgba(32, 32, 32, 0.6) !important;
   color: white;
@@ -115,14 +115,14 @@
   }
 
   .navbar-mb {
-    z-index: 30;
+    z-index: 3000;
   }
 
   .non-stretch {
     background-color: $blue;
     height: 100vh;
     width: 100%;
-    z-index: 30;
+    z-index: 3000;
     transform: translateX(100%);
     transition-duration: 0.4s;
   }

@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/scss/bootstrap.scss";
 @import "src/assets/scss/variables";
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
 @import "assets/fontawesome/css/all.css";
 
 * {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
 }
 
 body {
@@ -42,14 +42,29 @@ body {
 }
 
 .btn-general {
-    padding: 10px 20px 10px 20px !important;
-    box-shadow: 13px 13px 50px -24px $blue !important;
-    color: #ffffff !important;
-    background: $deepblue !important;
+  padding: 10px 20px 10px 20px !important;
+  box-shadow: 13px 13px 50px -24px $blue !important;
+  color: #ffffff !important;
+  background: $deepblue !important;
 
-    &:hover {
-        background: #ffffff !important;
-        color: #231f20 !important;
-        border: black solid 1px !important;
-    }
+  &:hover {
+    background: #ffffff !important;
+    color: #231f20 !important;
+    border: black solid 1px !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: $deepblue;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  background-color: #ffffff87;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 1px;
+  background-color: $deepblue;
 }

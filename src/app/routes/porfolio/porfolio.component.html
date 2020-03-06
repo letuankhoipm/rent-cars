@@ -1,0 +1,33 @@
+<div class="ltk-about-me-headline ltk-about-me">
+  <div class="ltk-banner">
+    <div class="container-fluid h-100">
+      <div class="row ltk-banner-shadow h-100">
+        <div class="col-lg-12 my-auto text-right">
+          <h2 class="text-uppercase">
+            profolio gallery
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ltk-porfolio">
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col-lg-12">
+        <h1 class="ltk-design-title pl-4">
+          Recent Works
+        </h1>
+      </div>
+      <div class="col-lg-12 mt-4 ltk-gallery-title">
+       <div class="container">
+         <div class="row">
+           <div *ngFor="let graphDesign of graphicDesignLists" class="col-lg-4">
+              <work-card [isHidden]="hiddenThumbnail" [card]="graphDesign"></work-card>
+           </div>
+         </div>
+       </div>
+      </div>
+    </div>
+</div>

@@ -14,29 +14,25 @@
 <div class="ltk-frame">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 main-frame">
+      <div class="col-lg-12 main-frame">
         <div class="ltk-avatar">
           <div class="container">
             <div class="row">
-              <div class="col-lg-4 avatar">
-                <img src="assets/images/avatar.jpg" alt="avatar" class="avatar-img">
+              <div class="col-lg-2 avatar">
+                <img [src]="user?.avatar" alt="avatar" class="avatar-img">
               </div>
-              <div class="col-lg-8 gen-infor">
+              <div class="col-lg-10 gen-infor">
                 <h1 class="first-name">
-                  LE
+                  {{user?.name}}
                 </h1>
-                <h2 class="last-name">
-                  TUAN KHOI
-                </h2>
                 <div class="w-100">
                   <button class="btn btn-job-infor">
-                    WEBSITE DESIGNER AND DEVELOPER
+                    {{user?.jobTitle}}
                   </button>
                 </div>
                 <div class="w-100">
                   <p class="text-white mt-2 pt-2">
-                    Accomplished website developer and information system with 2 years of experience in development of
-                    Website applications.
+                    {{user?.description}}
                   </p>
                 </div>
               </div>
@@ -44,8 +40,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 main-frame-2"></div>
-      <div class="col-lg-8 contact-frame">
+      <div class="col-lg-12 contact-frame d-none d-sm-block">
         <div class="col-lg-12 contact-infor">
           <div class="container">
             <div class="row">
@@ -57,7 +52,7 @@
                     </div>
                     <div class="col-lg-10">
                       <p class="text-white m-0">
-                        +849 654 694 03
+                        {{user?.phone}}
                       </p>
                     </div>
                     <div class="col-lg-2 contact-icon text-center p-0">
@@ -65,7 +60,7 @@
                     </div>
                     <div class="col-lg-10">
                       <p class="text-white m-0">
-                        letuankhoi.dev@gmail.com
+                        {{user?.email}}
                       </p>
                     </div>
                   </div>
@@ -79,7 +74,7 @@
                     </div>
                     <div class="col-lg-10">
                       <p class="text-white m-0">
-                        https://lucienroux-2019.firebaseapp.com
+                        {{user?.webLink}}
                       </p>
                     </div>
                     <div class="col-lg-2 contact-icon text-center p-0">
@@ -87,7 +82,7 @@
                     </div>
                     <div class="col-lg-10">
                       <p class="text-white m-0">
-                        Thu Duc District, Ho Chi Minh City, Vietnam
+                        {{user?.address}}
                       </p>
                     </div>
                   </div>
@@ -97,7 +92,6 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 contact-frame"></div>
       <div class="col-lg-8 exp-mg">
         <div class="container experience-frame p-4">
           <div class="row">
@@ -108,20 +102,20 @@
             </div>
             <div *ngFor="let exp of exps" class="container mt-4">
               <div class="row">
-                <div class="col-lg-2 pr-0">
+                <div class="col-lg-2 pr-0 d-none d-sm-block">
                   <button class="btn btn-exp">
-                    {{exp.years}}
+                    {{exp?.duration}}
                   </button>
                 </div>
-                <div class="col-lg-9 exp-infor pl-0">
+                <div class="col-lg-9 exp-infor">
                   <h4 class="exp-job text-uppercase font-weight-bold">
-                    {{exp.job}}
-                    <span class="exp-country">
-                      - {{exp.nation}}
-                    </span>
+                    {{exp?.expName}}
                   </h4>
                   <p class="exp-content">
-                    {{exp.content}}
+                    {{exp?.note}}
+                  </p>
+                  <p class="exp-content font-weight-bold">
+                    {{exp?.company}}
                   </p>
                 </div>
               </div>
@@ -129,8 +123,8 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 skill-frame">
-        <div class="container">
+      <div class="col-lg-4 skill-mg">
+        <div class="container skill-frame">
           <div class="row">
             <div class="col-lg-12">
               <h3 class="text-white font-weight-bold text-center">MY SKILL</h3>
@@ -139,79 +133,35 @@
                 , and maintenance.
               </p>
             </div>
-            <div class="col-lg-6 text-center">
-
-              <div class="skill-section my-4">
-                <button class="btn btn-skill-2">
-                  <i class="fab fa-html5"></i>
-                </button>
-                <p class="text-white p-0">
-                  HTML5
-                </p>
-              </div>
-              <div class="skill-section my-4">
-                <button class="btn btn-skill-2">
-                  <i class="fab fa-css3-alt"></i>
-                </button>
-                <p class="text-white p-0">
-                  CSS
-                </p>
-              </div>
-              <div class="skill-section my-4">
-                <button class="btn btn-skill-2">
-                  <i class="fab fa-js"></i>
-                </button>
-                <p class="text-white p-0">
-                  Javascript
-                </p>
-              </div>
-              <div class="skill-section my-4">
-                <button class="btn btn-skill-2">
-                  <i class="fab fa-angular"></i>
-                </button>
-                <p class="text-white p-0">
-                  Angular
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-6 text-center">
-              <div class="skill-section my-4">
-                <button class="btn btn-skill">
-                  <img style="width: 90%;" src="assets/icon/ps.png" alt="ps">
-                </button>
-                <p class="text-white m-0">
-                  Photoshop
-                </p>
-              </div>
-              <div class="skill-section my-4">
-                <button class="btn btn-skill">
-                  <img style="width: 90%;" src="assets/icon/ai.png" alt="ps">
-                </button>
-                <p class="text-white p-0">
-                  Illustrator
-                </p>
-              </div>
-              <div class="skill-section my-4">
-                <button class="btn btn-skill-2">
-                  <i class="fas fa-file-word"></i>
-                </button>
-                <p class="text-white p-0">
-                  Word
-                </p>
-              </div>
-              <div class="skill-section my-4">
-                <button class="btn btn-skill-2">
-                  <i class="fas fa-file-powerpoint"></i>
-                </button>
-                <p class="text-white p-0">
-                  Power Point
-                </p>
-              </div>
+            <div class="col-lg-12 col-12 pl-4">
+              <h5 *ngFor="let skill of skills" class="text-white">
+                {{skill}}
+              </h5>
             </div>
           </div>
         </div>
       </div>
       <div class="col-lg-12">
+        <div class="container edu-frame">
+          <div class="row">
+            <div class="col-lg-12 mt-1 mb-3">
+              <h1 class="edu-title">
+                LANGUAGES
+              </h1>
+            </div>
+            <div class="col-lg-12">
+              <div class="container">
+                <div class="row">
+                  <h4 class="w-100" *ngFor="let lang of langs">
+                    {{lang}}
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 mt-4">
         <div class="container edu-frame">
           <div class="row">
             <div class="col-lg-12 mt-1 mb-3">
@@ -222,23 +172,20 @@
             <div *ngFor="let edu of edus" class="col-lg-6">
               <div class="container">
                 <div class="row">
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 pl-0">
                     <h5 class="edu-job font-weight-bold">
-                      {{edu.job}}
+                      {{edu?.eduName}}
                     </h5>
-                    <button class="btn btn-edu">
-                      {{edu.years}}
+                    <button class="btn btn-edu my-2">
+                      {{edu?.duration}}
                     </button>
                   </div>
-                  <div class="col-lg-8">
+                  <div class="col-lg-8 pl-0">
                     <h4 class="exp-job font-weight-bold">
-                      {{edu.uni}}
-                      <span class="exp-country">
-                        - {{edu.nation}}
-                      </span>
+                      {{edu?.location}}
                     </h4>
                     <p class="exp-content">
-                      {{edu.content}}
+                      {{edu?.note}}
                     </p>
                   </div>
                 </div>
@@ -252,18 +199,19 @@
           <div class="row">
             <div class="col-lg-3">
               <h1 class="hobbie-title">
-                HOBBIES
+                SOCIAL SKILL
               </h1>
             </div>
             <div class="col-lg-9">
               <div class="container">
                 <div class="row">
-                  <div *ngFor="let hobbie of hobbies" class="col-lg-2 ">
+                  <div *ngFor="let hobbie of hobbies" class="col-lg-2 col-6">
                     <div class="hobbies-icon">
-                    <span class="hobbie-icon text-center" [innerHTML]="hobbie.icon"></span>
-                    <h5 class="title font-weight-bold">
-                      {{hobbie.name}}
-                    </h5>
+                      <span class="hobbie-icon text-center" [innerHTML]="hobbie.icon"></span>
+                      <h5 class="title font-weight-bold">
+                        {{hobbie.name}}
+                      </h5>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -273,4 +221,3 @@
       </div>
     </div>
   </div>
-</div>

@@ -15,10 +15,10 @@ const routes: Routes = [
                 path: 'about-me',
                 loadChildren: "../../routes/about-me/about-me.module#AboutMeModule"
             },
-            // {
-            //     path: 'place',
-            //     loadChildren: "../../routes/place/place.module#PlaceModule"
-            // }
+            {
+                path: 'porfolio',
+                loadChildren: "../../routes/porfolio/porfolio.module#PorfolioModule"
+            }
         ]
     }
 ];
