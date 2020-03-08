@@ -1,13 +1,7 @@
 @import "src/assets/scss/variables";
 
 footer {
-  // background: #0f5240;
-  background: $blue;
   padding-top: 100px;
-
-  .footer-copyright {
-    background: #231f20 !important;
-  }
 
   .wooden {
     position: relative;
@@ -54,8 +48,4 @@ footer {
       box-shadow: 13px 13px 50px -24px $blue !important;
     }
   }
-}
-
-.newsletter {
-  padding-bottom: 80px;
 }

@@ -8,13 +8,13 @@
   }
 
   h1 {
-    color: $blue;
+    color: white;
   }
 
   .ltk-nav-link {
     font-size: 1.2rem;
     .nav-link {
-      color: black !important;
+      color: white !important;
     }
 
     &:focus,
@@ -66,8 +66,9 @@
     padding: 25px !important;
 
     &:hover {
-      background-color: $blue;
-      transition-duration: 0.4s;
+      color: $blue !important;
+      background-color: white;
+      transition-duration: 0.2s;
     }
   }
 }
@@ -111,7 +112,7 @@
 
 .ltk-navbar-mobile {
   h1 {
-    color: $blue;
+    color: white;
   }
 
   .navbar-mb {
@@ -139,7 +140,7 @@
 
   .non-flow {
     i {
-      color: $blue;
+      color: white;
     }
     transition-duration: 0.4s;
   }

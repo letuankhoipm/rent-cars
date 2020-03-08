@@ -9,7 +9,9 @@
 }
 
 body {
-  background-color: white !important;
+  background-image: url("assets/images/G.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .ltk-line {
@@ -45,7 +47,8 @@ body {
   padding: 10px 20px 10px 20px !important;
   box-shadow: 13px 13px 50px -24px $blue !important;
   color: #ffffff !important;
-  background: $deepblue !important;
+  border: white solid 1px !important;
+  background: transparent !important;
 
   &:hover {
     background: #ffffff !important;

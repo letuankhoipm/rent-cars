@@ -1,44 +1,38 @@
 <app-heading [text]="cardDetail?.name"></app-heading>
-<div class="container ltk-detail p-0">
-  <div class="row w-100 h-100">
-    <div class="col-lg-12 w-100 h-100">
-      <div class="container-fluid w-100 h-100">
-        <div class="row w-100 h-100">
-          <div class="col-lg-5 p-2 w-100 h-100">
-            <div [ngStyle]="{background: 'url(assets/images/w2.jpg)'}" class="ltk-background-detail w-100 h-100">
-            </div>
+<div class="container ltk-detail">
+  <div class="row h-100">
+    <div class="col-lg-5 py-2 h-100">
+      <div [ngStyle]="{background: 'url(assets/images/w2.jpg)'}" class="ltk-background-detail w-100 h-100">
+      </div>
+    </div>
+    <div class="col-lg-7">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="ltk-detail-title mt-4 pt-4">
+              {{cardDetail?.name}}
+            </h1>
           </div>
-          <div class="col-lg-7">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <h1 class="ltk-detail-title mt-4 pt-4">
-                    {{cardDetail?.name}}
-                  </h1>
-                </div>
-                <div class="col-lg-12 ltk-detail-link my-2">
-                  Platform
-                  <span *ngFor="let platform of platforms" class="badge badge-dark mr-2 display-2">{{platform}}</span>
-                </div>
-                <div class="col-lg-12 ltk-detail-link my-2">
-                  Address
-                  <a href="" class="">
-                    {{cardDetail?.link}}
-                  </a>
-                </div>
-                <div class="col-lg-12 ltk-detail-link my-2">
-                 Description
-                  <p style="font-size: 1rem;">
-                    {{cardDetail?.description}}
-                  </p>
-                </div>
-                <div class="col-lg-12 ltk-detail-link my-2">
-                 Galleries
-                 <div class="ltk-detail-gallery pt-4">
-                   <gallery [galleryImages]="listImages"></gallery>
-                 </div>
-                </div>
-              </div>
+          <div class="col-lg-12 ltk-detail-link my-2">
+            Platform
+            <span *ngFor="let platform of platforms" class="badge badge-dark mr-2 display-2">{{platform}}</span>
+          </div>
+          <div class="col-lg-12 ltk-detail-link my-2">
+            Address
+            <a href="" class="">
+              {{cardDetail?.link}}
+            </a>
+          </div>
+          <div class="col-lg-12 ltk-detail-link my-2">
+            Description
+            <p style="font-size: 1rem;">
+              {{cardDetail?.description}}
+            </p>
+          </div>
+          <div class="col-lg-12 ltk-detail-link my-2">
+            Galleries
+            <div class="ltk-detail-gallery pt-4">
+              <gallery [galleryImages]="listImages"></gallery>
             </div>
           </div>
         </div>

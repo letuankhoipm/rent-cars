@@ -1,9 +1,5 @@
 @import "src/assets/scss/variables";
 
-.ltk-about-me-headline {
-  padding-top: 20px;
-}
-
 @media (max-width: 768px) {
   .ltk-about-me-headline {
     padding-top: 60px;
@@ -12,6 +8,29 @@
 
 .ltk-porfolio {
   padding-top: 50px;
+}
+
+.ltk-pagination {
+  .ngx-pagination {
+    .current {
+      background: white;
+      color: $blue;
+      border-radius: 3px;
+    }
+
+    a {
+      color: white;
+      border: 1px solid transparent;
+
+      &:hover {
+        transition-duration: .3s;
+        background: transparent;
+        text-decoration: none;
+        border-radius: 3px;
+        border: 1px solid white;
+      }
+    }
+  }
 }
 
 .ltk-banner {
@@ -37,5 +56,5 @@
 }
 
 .ltk-design-title {
-  border-left: 10px solid $blue;
+  border-left: 10px solid white;
 }

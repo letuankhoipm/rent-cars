@@ -4,8 +4,12 @@
   position: relative;
 }
 
+.ltk-ss {
+  width: 100%;
+}
+
 .ltk-text {
-  color: black;
+  color: white;
 }
 
 .ltk-icon {
@@ -22,37 +26,33 @@
 
 .ltk-ct-icon {
   font-size: 50px;
-  color: $blue;
-
-  &:focus,
-  &:active,
-  &:hover {
-    transition-duration: 0.2s;
-    color: white !important;
-  }
+  color: white;
 }
+
 @media (min-width: 768px) {
   .txt-animante {
     padding-top: 150px;
   }
+
+  .ltk-ss {
+    width: 90%;
+  }
 }
 
 .btn-ltk {
-  background: white !important;
+  background: transparent !important;
   border: none;
 
   &:focus,
   &:active,
   &:hover {
     transition-duration: 0.2s;
-    color: white !important;
-    background: $blue !important;
+    background: white !important;
     box-shadow: 13px 13px 50px -24px $blue !important;
+    .ltk-ct-icon {
+      color: $blue !important;
+    }
   }
-}
-
-.ltk-social-media {
-  background: $blue;
 }
 
 .ltk-why {
@@ -61,19 +61,15 @@
   }
 }
 
-.ltk-carousel {
-  background: $blue;
-}
-
 .ltk-friendly {
   h1 {
-    color: $blue;
+    color: white;
   }
 }
 
 .ltk-sologan {
   h1 {
-    color: $blue;
+    color: white;
   }
 }
 
@@ -82,14 +78,18 @@
     cursor: pointer;
     background: transparent;
     border: none;
-    color: $blue;
+    color: white;
     height: 290px;
 
     &:hover {
       transition-duration: 0.2s;
-      color: #fff;
-      background: $blue;
+      color: $blue;
+      background: white;
       box-shadow: 13px 13px 50px -24px $blue;
+
+      .ltk-why-icon {
+        color: $blue;
+      }
     }
   }
 
@@ -108,7 +108,7 @@
   }
 
   .ltk-why-icon {
-    color: $blue;
+    color: white;
     font-size: 60px;
   }
 }

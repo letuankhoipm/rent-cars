@@ -35,8 +35,7 @@
 .ltk-frame {
   .main-frame,
   .contact-frame {
-    background: $blue;
-    box-shadow: 13px 13px 50px -24px $blue;
+    background: transparent;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -44,8 +43,8 @@
   .skill-frame {
     padding: 15px;
     border-radius: 20px;
-    background: #231f20;
-    box-shadow: 13px 13px 50px -24px $blue;
+    background: transparent;
+    border: solid 1px white;
   }
 
   .experience-frame,
@@ -53,7 +52,6 @@
   .hobbie-frame {
     border-radius: 20px;
     background: white;
-    box-shadow: 13px 13px 50px -24px $blue;
   }
 
   .hobbie-frame,
@@ -74,9 +72,10 @@
   }
 
   .btn-job-infor {
-    background: #231f20;
+    background: transparent;
     color: white;
     font-weight: bold;
+    border: solid 1px white;
     border-radius: 35px;
 
     &:active,

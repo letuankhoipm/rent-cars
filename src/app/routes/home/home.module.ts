@@ -6,6 +6,7 @@ import { TextAnimateModule } from 'src/app/components/text-animate/text-animate.
 import { IntroAnimateModule } from 'src/app/components/intro-animate/intro-animate.module';
 import { ListWorkModule } from 'src/app/components/list-work/list-work.module';
 import { BlogCarouselModule } from 'src/app/components/blog-carousel/blog-carousel.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -15,6 +16,7 @@ import { BlogCarouselModule } from 'src/app/components/blog-carousel/blog-carous
     TextAnimateModule,
     IntroAnimateModule,
     ListWorkModule,
+    RouterModule,
     BlogCarouselModule
   ]
 })
