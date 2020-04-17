@@ -1,12 +1,17 @@
 @import "src/assets/scss/variables";
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script&display=swap");
 
 .ltk-about-me-headline {
-  margin-top: -80px;
+  margin-top: -78px;
 }
 
 @media (max-width: 768px) {
   .ltk-about-me-headline {
-    margin-top: 0;
+    margin-top: -5px;
+  }
+
+  h2 {
+    font-size: 3.5rem !important;
   }
 }
 
@@ -20,18 +25,7 @@
   color: white;
   background: no-repeat center center;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(32, 32, 32, 0.6);
-  }
-
-  .ltk-banner-shadow {
-    background: url("/assets/images/work.jpg") no-repeat;
+  .text-heading {
+    font-family: "Dancing Script", cursive !important;
   }
 }

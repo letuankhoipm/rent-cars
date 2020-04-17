@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   public awake: boolean = false;
   public display: boolean = false;
   public stretching: boolean = false;
-  public ltkLogo = 'assets/logo/tuankhoilogo.png';
+  public ltkLogo = 'assets/logo/las.png';
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
       if (window.scrollY > 30) {
         this.display = true;
       } else {
-        this.ltkLogo = '/assets/logo/tuankhoilogo.png';
+        this.ltkLogo = '/assets/logo/las.png';
         this.display = false;
       }
     }

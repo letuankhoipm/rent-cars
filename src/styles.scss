@@ -11,6 +11,7 @@
 body {
   background-image: url("assets/images/G.png") !important;
   background-repeat: no-repeat;
+  background-position: right;
   background-size: cover;
 }
 
@@ -47,27 +48,26 @@ body {
   padding: 10px 20px 10px 20px !important;
   box-shadow: 13px 13px 50px -24px $blue !important;
   color: #ffffff !important;
-  border: white solid 1px !important;
-  background: transparent !important;
+  background: black !important;
 
   &:hover {
-    background: #ffffff !important;
-    color: #231f20 !important;
-    border: black solid 1px !important;
+    background: transparent !important;
+    color: white !important;
+    border: white solid 1px !important;
   }
 }
 
 ::-webkit-scrollbar {
   width: 8px;
-  background-color: $deepblue;
+  background-color: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 1px;
-  background-color: #ffffff87;
+  background-color: black;
 }
 
 ::-webkit-scrollbar-track {
   border-radius: 1px;
-  background-color: $deepblue;
+  background-color: #ffffff;
 }

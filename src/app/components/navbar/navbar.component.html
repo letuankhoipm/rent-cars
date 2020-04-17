@@ -2,20 +2,16 @@
     <nav class="navbar navbar-expand-lg navbar-dark py-0" id="ltk-nav" [class.scrolled]="scrolled"
         [class.awake]="awake">
         <a class="navbar-brand ml-3" [routerLink]="['/']">
-            <h1 class="text-blue font-weight-bold">LUCIEN ROUX</h1>
+            <!-- <h1 class="text-blue font-weight-bold">LUCIEN ROUX</h1> -->
+            <img style="width: 170px;" src="assets/logo/las.png" alt="footer logo">
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
             aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul [class.navhidden]="display" class="navbar-nav ml-auto mt-2 mt-lg-0 mr-4" id="displayNav">
-                <li class="nav-item active mx-4 ltk-nav-link">
-                    <a class="nav-link p-0" [routerLink]="['/']"><i class="far fa-envelope"></i>
-                        letuankhoi.dev@gmail.com
-                    </a>
-                </li>
                 <li class="nav-item  mx-4 ltk-nav-link">
-                    <a class="nav-link p-0" [routerLink]="['/about-me']"><i class="far fa-phone"></i>
-                        +84 965 469 403
+                    <a class="nav-link p-0" [routerLink]="['/about-me']"><i class="far fa-star"></i>
+                        We're developer, we love code, we love design
                     </a>
                 </li>
             </ul>
@@ -45,7 +41,9 @@
         <div class="row w-100">
             <div [class.icon-flow]="stretching" class="col-10 p-0 non-flow">
                 <a class="navbar-brand ml-3" [routerLink]="['/']">
-                    <h1 class="text-white font-weight-bold">LR</h1>
+                    <h1 class="text-white font-weight-bold">
+                        <img style="width: 130px;" src="assets/logo/las.png" alt="footer logo">
+                    </h1>
                 </a>
             </div>
             <div (click)="showMobileNav()" [class.icon-flow]="stretching" class="col-2 p-0 non-flow text-right">

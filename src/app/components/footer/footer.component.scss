@@ -30,6 +30,16 @@ footer {
     border-bottom-right-radius: 0px;
   }
 
+  .bg-bl {
+    background: rgba(32, 32, 32, 0.6) !important;
+  }
+
+  .bg-bl-2 {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: rgba(32, 32, 32, 0.6) !important;
+  }
+
   .btn-ltk-footer {
     background: transparent !important;
     border: none;

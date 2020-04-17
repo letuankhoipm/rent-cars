@@ -51,7 +51,7 @@
   .edu-frame,
   .hobbie-frame {
     border-radius: 20px;
-    background: white;
+    background: transparent;
   }
 
   .hobbie-frame,
@@ -61,7 +61,7 @@
 
   .avatar-img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 50%;
   }
 
   .first-name,
@@ -72,10 +72,9 @@
   }
 
   .btn-job-infor {
-    background: transparent;
+    background: black;
     color: white;
     font-weight: bold;
-    border: solid 1px white;
     border-radius: 35px;
 
     &:active,
@@ -83,6 +82,10 @@
       box-shadow: none;
       outline: none;
     }
+  }
+
+  .fa-rocket {
+    color: black !important;
   }
 
   .btn-skill {
@@ -150,11 +153,11 @@
   .edu-title,
   .hobbie-title {
     font-weight: bold;
-    color: $blue;
+    color: white;
   }
 
   .exp-job {
-    color: $blue;
+    color: white;
     span {
       color: black !important;
     }
