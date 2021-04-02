@@ -3,8 +3,9 @@
 .ltk-navbar {
   nav {
     background: transparent;
+    position: fixed !important;
+    width: 100%;
     z-index: 1001;
-    top: 10px;
   }
 
   h1 {
@@ -30,7 +31,6 @@
   position: fixed;
   background: rgba(32, 32, 32, 0.6) !important;
   width: 100%;
-  top: 0 !important;
   transition-duration: 0.3s;
   box-shadow: 13px 13px 50px -24px $blue;
 

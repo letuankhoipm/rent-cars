@@ -11,13 +11,13 @@ export class NavbarComponent implements OnInit {
 
   constructor(@Inject(PLATFORM_ID) public platformId: string) { }
 
-  public scrolled: boolean = false;
-  public awake: boolean = false;
-  public display: boolean = false;
-  public stretching: boolean = false;
+  public scrolled = false;
+  public awake = false;
+  public display = true;
+  public stretching = false;
   public ltkLogo = 'assets/logo/las.png';
 
-  @HostListener("window:scroll", [])
+  @HostListener('window:scroll', [])
   onWindowScroll() {
     if (isPlatformBrowser(this.platformId)) {
       this.scrolled = window.scrollY > 30;
@@ -26,7 +26,6 @@ export class NavbarComponent implements OnInit {
         this.display = true;
       } else {
         this.ltkLogo = '/assets/logo/las.png';
-        this.display = false;
       }
     }
   }

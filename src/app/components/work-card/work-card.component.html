@@ -1,19 +1,24 @@
 <div [routerLink]="['/porfolio', card?.id]" routerLinkActive="router-link-active" class="ltk-work my-2">
   <div class="card text-left">
-    <div *ngIf="isHidden" class="hover">
-
-    </div>
     <img *ngIf="isHidden" class="icon" src="assets/logo/tuankhoilogo-icon.png" alt="#">
-    <img class="card-img-top" [src]="card.imgUrl" alt="">
+    <img class="card-img-top p-2" [src]="card.img" alt="">
     <div class="card-body mt-2">
-      <span *ngFor="let platform of platforms" class="badge badge-light mb-2 mr-2">{{platform}}</span>
       <h4 class="card-title py-2 px-2">{{card.name}}</h4>
       <p class="card-text">
-        {{card.description}}
+        Plate No. {{card.carNumberPlate}}
       </p>
-     <button [routerLink]="['/porfolio', card?.id]" routerLinkActive="router-link-active"  class="btn float-right btn-read-more">
-      <i class="fas fa-external-link-alt mr-1"></i>
-      Read more</button>
+      <p class="card-text">
+        Location: {{card.location}}
+      </p>
+      <p class="card-text">
+        Cost: ${{card.rentCost}}
+      </p>
+      <p class="card-text">
+        Date: {{card.postDated}}
+      </p>
+      <div class="logo text-right mb-2">
+        <img class="w-50" src="assets/logo/las.png" alt="">
+      </div>
     </div>
   </div>
 </div>

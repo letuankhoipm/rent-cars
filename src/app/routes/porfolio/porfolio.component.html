@@ -1,11 +1,11 @@
-<app-heading [text]="'Porfolio'"></app-heading>
+<app-heading [text]="'Vehicle'"></app-heading>
 
 <div class="ltk-porfolio">
   <div class="container">
     <div class="row mt-4">
       <div class="col-lg-12">
-        <h1 class="ltk-design-title text-white pl-4">
-          Recent Works
+        <h1 class="text-white pl-4">
+          Supercars
         </h1>
       </div>
       <div class="col-lg-12 mt-4 ltk-gallery-title">
@@ -13,7 +13,7 @@
           <div class="row">
             <div *ngFor="let graphDesign of graphicDesignLists | paginate: { itemsPerPage: 6, currentPage: p}"
               class="col-lg-4">
-              <work-card [isHidden]="hiddenThumbnail" [card]="graphDesign"></work-card>
+              <work-card [card]="graphDesign"></work-card>
             </div>
             <div class="col-lg-12 mt-4 text-center">
               <pagination-controls class="ltk-pagination" autoHide="true" responsive="true" (pageChange)="p = $event"></pagination-controls>

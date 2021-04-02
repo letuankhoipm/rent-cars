@@ -6,11 +6,11 @@ import { GraphService } from 'src/app/services/graph.service';
   templateUrl: './list-work.component.html',
   styleUrls: ['./list-work.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  providers: [GraphService]
+  providers: []
 })
 export class ListWorkComponent implements OnInit {
 
-  constructor(private graphService: GraphService) { }
+  constructor() { }
   hidden = true;
 
   public workCards: any;
@@ -39,9 +39,7 @@ export class ListWorkComponent implements OnInit {
   };
 
   ngOnInit() {
-    this.graphService.getAlls().subscribe(data => {
-      this.workCards = data;
-    })
+
   }
 
 }

@@ -8,13 +8,6 @@
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
             aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul [class.navhidden]="display" class="navbar-nav ml-auto mt-2 mt-lg-0 mr-4" id="displayNav">
-                <li class="nav-item  mx-4 ltk-nav-link">
-                    <a class="nav-link p-0" [routerLink]="['/about-me']"><i class="far fa-star"></i>
-                        We're developer, we love code, we love design
-                    </a>
-                </li>
-            </ul>
             <ul [class.navdisplay]="display" class="navbar-nav ml-auto mt-2 mt-lg-0 mr-4" id="hiddenNav">
                 <li class="nav-item ltk-nav-link">
                     <a class="nav-link p-0" [routerLink]="['/']">
@@ -23,12 +16,17 @@
                 </li>
                 <li class="nav-item ltk-nav-link">
                     <a class="nav-link p-0" [routerLink]="['/porfolio']">
-                        Porfolio
+                        Vehicle
+                    </a>
+                </li>
+                <li class="nav-item ltk-nav-link">
+                    <a class="nav-link p-0" [routerLink]="['/porfolio']">
+                        Service
                     </a>
                 </li>
                 <li class="nav-item ltk-nav-link">
                     <a class="nav-link p-0" [routerLink]="['/about-me']">
-                        About
+                        Contact
                     </a>
                 </li>
             </ul>

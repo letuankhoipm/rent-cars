@@ -6,7 +6,7 @@ import { GraphService } from 'src/app/services/graph.service';
   selector: 'app-porfolio-detail',
   templateUrl: './porfolio-detail.component.html',
   styleUrls: ['./porfolio-detail.component.scss'],
-  providers: [GraphService]
+  providers: []
 })
 export class PorfolioDetailComponent implements OnInit {
 
@@ -16,20 +16,10 @@ export class PorfolioDetailComponent implements OnInit {
   listWorks: any;
   cardDetail: any;
   listImages: any;
-  constructor(private route: ActivatedRoute, private graphService: GraphService) { }
+  constructor(private route: ActivatedRoute, ) { }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.id = params['id'];
-      this.graphService.getById(this.id).subscribe(data => {
-        this.listImages = data['snapshots'];
-        this.cardDetail = data;    
-        this.platforms = data['platform'];
-      })
-    })
-    this.graphService.getAlls().subscribe(data => {
-      this.listWorks = data;
-    })
+
   }
 
 }

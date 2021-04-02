@@ -1,6 +1,16 @@
 @import "src/assets/scss/variables";
 
 .ltk-work {
+
+  .logo {
+    opacity: .5;
+  }
+
+  .card-img-top {
+    height: 190px;
+    object-fit: cover;
+  }
+
   .card {
     cursor: pointer;
     border: 1px transparent solid !important;
@@ -11,18 +21,16 @@
     opacity: 1;
 
     &:hover {
+      background-color: rgba(32, 32, 32, 0.7) !important;
       transition-duration: 0.4s;
       opacity: 1 !important;
 
-      .hover {
-        z-index: -1;
-        transition-duration: 0.4s;
-        background-color: rgba(32, 32, 32, 0) !important;
+      .p {
+        color: black;
       }
 
-      .icon {
-        transition-duration: 0.4s;
-        opacity: 0;
+      .logo {
+        opacity: 1;
       }
     }
   }

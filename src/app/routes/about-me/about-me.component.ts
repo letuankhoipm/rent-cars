@@ -40,20 +40,14 @@ export class AboutMeComponent implements OnInit {
       icon: '<i class="fas fa-palette"></i>',
       name: 'Design'
     },
-  ]
+  ];
 
   ngOnInit() {
     this.getUser();
   }
 
   getUser = () => {
-    this.userService.getAlls().subscribe(user => {
-      this.user = user[0];
-      this.edus = this.user['education'];
-      this.exps = this.user['experience'];
-      this.skills = this.user['technique'];
-      this.langs = this.user['languages'];
-    });
+
   }
 
 }

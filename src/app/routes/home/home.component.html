@@ -1,23 +1,23 @@
 <!-- <intro-animate></intro-animate> -->
 
 <div class="ltk-home pt-4">
-  <div class="container">
-    <div class="row">
+  <div class="container h-100">
+    <div class="row h-100">
       <div class="col-lg-6 pt-4 mt-4 d-block d-sm-none">
         <img class="float-right ltk-ss mt-4 pt-4" src="assets/images/astron2.png" alt="ss">
       </div>
       <div class="col-lg-6 txt-animante">
         <text-animate class="d-none d-sm-block"></text-animate>
         <p class="text-justify ltk-text mt-4">
-          Internet users don’t have a lot of time; they want to know as quickly as possible why they’re on your
-          site.
-          So, welcome to the world of JavaScript
+          Exclusive reports and current films: experience a broad range of topics from the fascinating world of
+          Rioferrari. To find out about offers in your location, please go to the local Rioferrari website.
         </p>
-        <button [routerLink]="['/porfolio']" routerLinkActive="router-link-active" class="btn btn-general my-2">Check it
-          out<i class="fal fa-paper-plane ml-2"></i></button>
+        <button [routerLink]="['/porfolio']" routerLinkActive="router-link-active" class="btn btn-general mt-4">
+          Rent now!
+          <i class="fal fa-paper-plane ml-2"></i></button>
       </div>
-      <div class="col-lg-6 d-none d-sm-block">
-        <img class="ltk-ss" src="assets/images/astron2.png" alt="ss">
+      <div class="col-lg-6 d-none d-sm-block my-auto">
+        <img class="ltk-ss" src="assets/images/a.png" alt="ss">
       </div>
     </div>
   </div>
@@ -27,18 +27,11 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 pl-4 ltk-contact-home my-4 py-4">
-        <h1 class="text-white w-25 bg-bl">
-          <i class="fas fa-atom mr-2"></i>
-          Technology
+        <h1 class="text-white w-25 ">
+          Cars Brand
         </h1>
         <p class="mt-4">
-
-          <button class="btn btn-primary btn-ltk mr-2"><i class="fab fa-angular ltk-ct-icon"></i></button>
-          <button class="btn btn-primary btn-ltk ml-2"><i class="fab fa-react ltk-ct-icon"></i></button>
-          <button class="btn btn-primary btn-ltk ml-2"><i class="fab fa-vuejs ltk-ct-icon"></i></button>
-          <button class="btn btn-primary btn-ltk ml-2"><i class="fab fa-adobe ltk-ct-icon"></i></button>
-          <button class="btn btn-primary btn-ltk ml-2"><i class="fab fa-node ltk-ct-icon"></i></button>
-          <button class="btn btn-primary btn-ltk ml-2"><i class="fab fa-github ltk-ct-icon"></i></button>
+          <img class="brand-img" *ngFor="let brand of brands" [src]="brand.img" alt="#">
         </p>
       </div>
     </div>
@@ -49,9 +42,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 pr-4 ltk-why row-reverse my-4">
-        <h1 class="bg-bl">
-          <i class="fas fa-fill-drip mr-2"></i>
-          My Advantages
+        <h1>
+          Services
         </h1>
       </div>
       <div class="ltk-why-choose col-lg-12 my-4">
@@ -96,9 +88,8 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 pr-4 ltk-why my-4">
-        <h1 class="text-white w-25 bg-bl">
-          <i class="fas fa-analytics mr-2"></i>
-          Experience
+        <h1 class="text-white w-25">
+          Prices
         </h1>
       </div>
       <div class="col-lg-12 pl-4 ltk-recent my-4">
@@ -112,8 +103,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 pr-4 ltk-why row-reverse my-4">
-        <h1 class="text-white bg-bl">
-          <i class="fas fa-handshake mr-2"></i>
+        <h1 class="text-white ">
           Promise
         </h1>
       </div>
@@ -149,21 +139,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="ltk-sologan py-4 my-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1 class="mb-4 pb-4">
-          Working Maxim
-        </h1>
-        <blockquote class="text-white">
-          "Always focus on working! Carefully doing in everything which even is little."
-        </blockquote>
       </div>
     </div>
   </div>
