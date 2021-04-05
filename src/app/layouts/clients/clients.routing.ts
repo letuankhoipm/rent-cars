@@ -18,7 +18,11 @@ const routes: Routes = [
             {
                 path: 'porfolio',
                 loadChildren: "../../routes/porfolio/porfolio.module#PorfolioModule"
-            }
+            },
+            {
+                path: 'check-out',
+                loadChildren: "../../routes/check-out/check-out.module#CheckOutModule"
+            },
         ]
     }
 ];

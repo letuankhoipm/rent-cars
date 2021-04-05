@@ -28,3 +28,10 @@
   background-size: cover !important;
   background-position: center !important;
 }
+
+.car-img {
+  height: 500px;
+  img {
+    object-fit: contain;
+  }
+}

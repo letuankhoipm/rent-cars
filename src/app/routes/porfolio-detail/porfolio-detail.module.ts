@@ -4,6 +4,7 @@ import { PorfolioDetailComponent } from './porfolio-detail.component';
 import { HeadingModule } from 'src/app/components/heading/heading.module';
 import { GalleryModule } from 'src/app/components/gallery/gallery.module';
 import { ListWorkModule } from 'src/app/components/list-work/list-work.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [PorfolioDetailComponent],
@@ -11,7 +12,8 @@ import { ListWorkModule } from 'src/app/components/list-work/list-work.module';
     CommonModule,
     HeadingModule,
     GalleryModule,
-    ListWorkModule
+    ListWorkModule,
+    RouterModule
   ],
   exports: [
     PorfolioDetailComponent

@@ -14,9 +14,19 @@ export class PorfolioDetailComponent implements OnInit {
   platforms = [];
   id: any;
   listWorks: any;
-  cardDetail: any;
+  // cardDetail: any;
+  cardDetail = {
+    carNumberPlate: '72B-14512',
+    categoryId: 1,
+    name: 'Roll Royce Phantom',
+    img: 'assets/images/c.png',
+    location: 'Las Vegas',
+    postDated: '25-11-2021',
+    rentCost: 5000,
+    status: 'Renting'
+  };
   listImages: any;
-  constructor(private route: ActivatedRoute, ) { }
+  constructor(private route: ActivatedRoute,) { }
 
   ngOnInit() {
 
