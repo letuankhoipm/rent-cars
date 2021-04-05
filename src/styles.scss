@@ -71,3 +71,15 @@ body {
   border-radius: 1px;
   background-color: #ffffff;
 }
+
+.btn-black {
+  background: black !important;
+  color: white !important;
+  border: black solid 1px !important;
+
+  &:hover {
+    transition-duration: 0.1s;
+    background: transparent !important;
+    color: black !important;
+  }
+}

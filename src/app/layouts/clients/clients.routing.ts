@@ -9,22 +9,22 @@ const routes: Routes = [
         children: [
             {
                 path: '',
-                loadChildren: "../../routes/home/home.module#HomeModule"
-            },
-            {
-                path: 'about-me',
-                loadChildren: "../../routes/about-me/about-me.module#AboutMeModule"
-            },
-            {
-                path: 'porfolio',
-                loadChildren: "../../routes/porfolio/porfolio.module#PorfolioModule"
+                loadChildren: '../../routes/home/home.module#HomeModule'
             },
             {
                 path: 'check-out',
-                loadChildren: "../../routes/check-out/check-out.module#CheckOutModule"
+                loadChildren: '../../routes/check-out/check-out.module#CheckOutModule'
+            },
+            {
+                path: 'porfolio',
+                loadChildren: '../../routes/porfolio/porfolio.module#PorfolioModule'
             },
         ]
-    }
+    },
+    {
+        path: 'login',
+        loadChildren: '../../routes/login/login.module#LoginModule'
+    },
 ];
 
 @NgModule({
