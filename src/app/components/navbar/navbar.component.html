@@ -24,9 +24,14 @@
                         Contact
                     </a>
                 </li>
-                <li class="nav-item ltk-nav-link">
+                <li *ngIf="!isAuth" class="nav-item ltk-nav-link">
                     <a class="nav-link p-0" [routerLink]="['/login']">
                         Login/Sing-up
+                    </a>
+                </li>
+                <li *ngIf="isAuth" class="nav-item ltk-nav-link">
+                    <a class="nav-link p-0" [routerLink]="['/about-me']">
+                        Profile
                     </a>
                 </li>
             </ul>

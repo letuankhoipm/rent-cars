@@ -1,4 +1,4 @@
-<app-heading [text]="'Brief information'"></app-heading>
+<app-heading [text]="'Profile'"></app-heading>
 <div class="ltk-frame mt-4 pt-4">
   <div class="container">
     <div class="row">
@@ -7,22 +7,12 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-2 avatar">
-                <img [src]="user?.avatar" alt="avatar" class="avatar-img">
+                <img src="assets/images/lisa.jpg" alt="avatar" class="avatar-img">
               </div>
-              <div class="col-lg-10 gen-infor">
+              <div class="col-lg-10 gen-infor my-auto">
                 <h2 class="first-name">
-                  {{user?.name}}
+                 Le Tuan Khoi
                 </h2>
-                <div class="w-100">
-                  <button class="btn btn-job-infor">
-                    {{user?.jobTitle}}
-                  </button>
-                </div>
-                <div class="w-100">
-                  <p class="text-white mt-2 pt-2">
-                    {{user?.description}}
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -80,55 +70,6 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-8 exp-mg">
-        <div class="container experience-frame p-4">
-          <div class="row">
-            <div class="col-lg-12 my-4">
-              <h2 class="exp-title">
-                <i class="fas fa-rocket mr-2"></i>Experience
-              </h2>
-            </div>
-            <div *ngFor="let exp of exps" class="container mt-4">
-              <div class="row">
-                <div class="col-lg-2 pr-0 d-none d-sm-block">
-                  <button class="btn btn-exp">
-                    {{exp?.duration}}
-                  </button>
-                </div>
-                <div class="col-lg-9 exp-infor">
-                  <h4 class="exp-job text-uppercase font-weight-bold">
-                    {{exp?.expName}}
-                  </h4>
-                  <p class="exp-content">
-                    {{exp?.note}}
-                  </p>
-                  <p class="exp-content font-weight-bold">
-                    {{exp?.company}}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 skill-mg">
-        <div class="container skill-frame">
-          <div class="row">
-            <div class="col-lg-12">
-              <h3 class="text-white font-weight-bold text-center">Technique</h3>
-              <p class="text-white text-center">
-                Possibility of working in every stage of the life cycle of software development, including design creation, coding,
-                , and maintenance.
-              </p>
-            </div>
-            <div class="col-lg-12 col-12 pl-4">
-              <h5 *ngFor="let skill of skills" class="text-white">
-                {{skill}}
-              </h5>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="col-lg-12">
         <div class="container edu-frame">
           <div class="row">
@@ -143,64 +84,6 @@
                   <h4 class="w-100" *ngFor="let lang of langs">
                     {{lang}}
                   </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-12 mt-4">
-        <div class="container edu-frame">
-          <div class="row">
-            <div class="col-lg-12 mt-1 mb-3">
-              <h2 class="edu-title">
-                <i class="fas fa-rocket mr-2"></i>Education
-              </h2>
-            </div>
-            <div *ngFor="let edu of edus" class="col-lg-6">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-4 pl-0">
-                    <h5 class="edu-job font-weight-bold">
-                      {{edu?.eduName}}
-                    </h5>
-                    <button class="btn btn-edu my-2">
-                      {{edu?.duration}}
-                    </button>
-                  </div>
-                  <div class="col-lg-8 pl-0">
-                    <h4 class="exp-job font-weight-bold">
-                      {{edu?.location}}
-                    </h4>
-                    <p class="exp-content">
-                      {{edu?.note}}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-12 my-4">
-        <div class="container hobbie-frame">
-          <div class="row">
-            <div class="col-lg-3">
-              <h2 class="hobbie-title">
-                <i class="fas fa-rocket mr-2"></i>Social skills
-              </h2>
-            </div>
-            <div class="col-lg-9">
-              <div class="container">
-                <div class="row">
-                  <div *ngFor="let hobbie of hobbies" class="col-lg-2 col-6">
-                    <div class="hobbies-icon">
-                      <span class="hobbie-icon text-center" [innerHTML]="hobbie.icon"></span>
-                      <h5 class="title font-weight-bold">
-                        {{hobbie.name}}
-                      </h5>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

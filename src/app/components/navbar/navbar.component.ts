@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit {
   constructor(@Inject(PLATFORM_ID) public platformId: string) { }
 
   public scrolled = false;
+  public isAuth = true;
   public awake = false;
   public display = true;
   public stretching = false;

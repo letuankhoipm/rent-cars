@@ -19,6 +19,10 @@ const routes: Routes = [
                 path: 'porfolio',
                 loadChildren: '../../routes/porfolio/porfolio.module#PorfolioModule'
             },
+            {
+                path: 'about-me',
+                loadChildren: '../../routes/about-me/about-me.module#AboutMeModule'
+            },
         ]
     },
     {

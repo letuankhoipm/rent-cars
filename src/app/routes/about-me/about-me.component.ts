@@ -5,11 +5,11 @@ import { UserService } from 'src/app/services/user.service';
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss'],
-  providers: [UserService]
+  providers: []
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor() { }
   edus = [];
   exps = [];
   skills = [];
