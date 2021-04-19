@@ -9,6 +9,7 @@ import { SignInComponent } from './sign-in.component';
   ],
   exports: [
     SignInComponent
-  ]
+  ],
+  entryComponents: [SignInComponent]
 })
 export class SignInModule { }

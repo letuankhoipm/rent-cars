@@ -9,6 +9,9 @@ import { RegisterComponent } from './register.component';
   ],
   exports: [
     RegisterComponent
+  ],
+  entryComponents: [
+    RegisterComponent
   ]
 })
 export class RegisterModule { }

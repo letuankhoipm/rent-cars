@@ -35,29 +35,6 @@ export class BlogCarouselComponent implements OnInit {
     },
   ]
 
-  public customOptions: any = {
-    margin: 20,
-    loop: true,
-    dots: false,
-    mouseDrag: false,
-    center: true,
-    slideBy: 1,
-    autoplay: true,
-    nav: true,
-    navClass: ['owl-prev', 'owl-next'],
-    dotsEach: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      660: {
-        items: 1
-      },
-      920: {
-        items: 2.9
-      },
-    }
-  };
 
   ngOnInit() {
   }
