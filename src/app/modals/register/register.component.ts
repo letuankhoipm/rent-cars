@@ -8,19 +8,28 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 
-  regisForm = new FormGroup({
-    address: new FormControl(null),
-    email: new FormControl(null),
-    fullName: new FormControl(null),
-    gender: new FormControl(null),
-    idCard: new FormControl(null),
-    password: new FormControl(null),
-    phoneNumber: new FormControl(null),
-    roleId: new FormControl(null),
-  })
-  constructor() { }
+  regisForm: FormGroup;
+  constructor() {
+    this.regisForm = new FormGroup({
+      address: new FormControl(null),
+      email: new FormControl(null),
+      fullName: new FormControl(null),
+      gender: new FormControl(null),
+      idCard: new FormControl(null),
+      password: new FormControl(null),
+      phoneNumber: new FormControl(null),
+      roleId: new FormControl(null),
+    })
+  }
 
   ngOnInit() {
+  }
+
+  onRegister = () => {
+    const req = {
+      ...this.regisForm.value
+    }
+    console.log(req);
   }
 
 }
