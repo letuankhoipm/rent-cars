@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +11,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   regisForm: FormGroup;
-  constructor() {
+  constructor(private authService: AuthService, private router: Router) {
     this.regisForm = new FormGroup({
       address: new FormControl(null),
       email: new FormControl(null),
@@ -30,6 +32,9 @@ export class RegisterComponent implements OnInit {
       ...this.regisForm.value
     }
     console.log(req);
+    this.authService.regis(req).subscribe((res: any) => {
+      res ? this.router.navigate(['/']) : null;
+    })
   }
 
 }
