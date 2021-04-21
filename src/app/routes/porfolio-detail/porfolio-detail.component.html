@@ -9,66 +9,66 @@
     <div class="col-12">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-6">
             <h1 class="ltk-detail-title mt-4">
               {{cardDetail?.name}}
             </h1>
           </div>
-          <div class="col-lg-12 ltk-detail-link my-2">
+          <div class="col-6 ltk-detail-link my-2">
             Plate No.
             <strong>
               {{cardDetail?.carNumberPlate}}
             </strong>
           </div>
-          <div class="col-lg-12 ltk-detail-link my-2">
+          <div class="col-6 ltk-detail-link my-2">
             Rent cost:
             <strong>
-              {{cardDetail?.rentCost}}
+              {{cardDetail?.rentCost}} VND
             </strong>
           </div>
-          <div class="col-lg-12 ltk-detail-link my-2">
+          <div class="col-6 ltk-detail-link my-2">
             Status:
             <strong>
               {{cardDetail?.statusName}}
             </strong>
           </div>
-          <div class="col-lg-12 ltk-detail-link my-2">
+          <div class="col-6 ltk-detail-link my-2">
             Post date:
             <strong>
-              {{cardDetail?.postDated}}
+              {{cardDetail?.postDated | date: 'mediumDate'}}
             </strong>
           </div>
-          <div class="col-lg-12 ltk-detail-link my-2">
+          <div class="col-6 ltk-detail-link my-2">
             Owner:
             <strong>
               {{cardDetail?.ownerName}}
             </strong>
           </div>
-          <div class="col-lg-12 ltk-detail-link my-2">
+          <div class="col-6 ltk-detail-link my-2">
             Brand:
             <strong>
               {{cardDetail?.brandName}}
             </strong>
           </div>
-          <div class="col-lg-12 ltk-detail-link my-2">
+          <div class="col-6 ltk-detail-link my-2">
             Location:
             <strong>
               {{cardDetail?.location}}
             </strong>
           </div>
-          <div class="col-lg-12 ltk-detail-link my-2">
+          <div class="col-6 ltk-detail-link my-2">
             Fuel:
             <strong>
               {{cardDetail?.fuel}}
             </strong>
           </div>
-          <div class="col-lg-12 ltk-detail-link my-2">
+          <div class="col-6 ltk-detail-link my-2">
             Contact no:
             <strong>
               {{cardDetail?.contactNumber}}
             </strong>
           </div>
-          <div class="col-lg-12 text-right">
+          <div class="col-12 text-right">
             <button [routerLink]="['/check-out']" routerLinkActive="router-link-active" class="btn btn-dark w-50">
               Rent now
             </button>
