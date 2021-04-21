@@ -21,20 +21,23 @@ export class AboutMeComponent implements OnInit {
       idCard: new FormControl(null),
       password: new FormControl(null),
       phoneNumber: new FormControl(null),
-      roleId: new FormControl(null),
+      roleId: new FormControl(0),
       roleName: new FormControl(null),
     })
   }
 
   ngOnInit() {
-
+    this.getProfile();
   }
 
   onSave = () => {
     const req = {
       ...this.profileForm.value
     };
-    
+    this.profileService.updateProfile(req).subscribe((res: any) => {
+      console.log(res);
+      res ? location.reload() : null;
+    })
   }
 
   getProfile() {

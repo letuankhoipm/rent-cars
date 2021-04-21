@@ -35,7 +35,7 @@
 .ltk-frame {
   .main-frame,
   .contact-frame {
-    background: transparent;
+    background: white;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -66,14 +66,12 @@
 
   .first-name,
   .last-name {
-    color: white;
     font-weight: bold;
     font-size: 2.5em;
   }
 
   .btn-job-infor {
     background: black;
-    color: white;
     font-weight: bold;
     border-radius: 35px;
 

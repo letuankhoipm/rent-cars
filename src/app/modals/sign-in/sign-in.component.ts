@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -6,10 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-in.component.scss'],
 })
 export class SignInComponent implements OnInit {
+  loginForm: FormGroup
 
-  constructor() { }
+  constructor(private authService: AuthService) {
+    this.loginForm = new FormGroup({
+      email: new FormControl(null),
+      password: new FormControl(null),
+    })
+  }
+
 
   ngOnInit() {
+  }
+
+  onLogin() {
+    const req = {
+      ...this.loginForm.value
+    };
+    this.authService.login(req).subscribe((res: any) => {
+      if (res) {
+        localStorage.setItem('TOKEN', res.data.access_token);
+      }
+    })
   }
 
 }

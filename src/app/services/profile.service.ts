@@ -12,4 +12,8 @@ export class ProfileService extends BaseService {
   getProfile() {
     return this.get(`${this.profileEndpoint}`);
   }
+
+  updateProfile(body) {
+    return this.put(body, `${this.profileEndpoint}/edit`)
+  }
 }

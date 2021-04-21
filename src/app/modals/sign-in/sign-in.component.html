@@ -2,29 +2,15 @@
   <div class="row">
     <div class="col-lg-8">
       <div class="login-normal p-4 h-100  w-100">
-        <form class="pl-4">
+        <form [formGroup]="loginForm" class="pl-4">
           <h2 class="pb-2"> <i class="fas fa-key pr-2"></i>Login to your account</h2>
           <p>Access your favorite listings, matching alerts, discounted property alerts, and more.</p>
           <div class="depart wheretogo">
-            <input type="text" placeholder="Username" name="username" class="w-100 p-2" required minlength="6">
-            <p class="form-validation m-0">Username must be at
-              least 6 characters long.</p>
-
+            <input type="text" placeholder="Email" formControlName="email" class="w-100 p-2" required minlength="6">
           </div>
           <div class="depart wheretogo pt-3 ">
-            <input type="password" placeholder="Password" name="password" class="w-100 p-2" required minlength="6">
-          </div>
-          <div class="check-box pt-2 pl-0 col-12">
-            <div class="row">
-              <div class="col-6">
-                <input type="checkbox" id="checked" class="regular-checkbox" /> <label class="pl-2" for="">Remember
-                  me</label>
-
-              </div>
-              <div class="col-6 forgot-pass">
-                <label for="" class="float-right">Forgot password?</label>
-              </div>
-            </div>
+            <input type="password" placeholder="Password" formControlName="password" class="w-100 p-2" required
+              minlength="6">
           </div>
           <div class="submit pt-3 pb-2">
             <button class="btn btn-black w-50">
