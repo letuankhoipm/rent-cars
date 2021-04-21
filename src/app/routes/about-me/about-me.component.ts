@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
   selector: 'app-about-me',
@@ -8,45 +10,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor() { }
-  edus = [];
-  exps = [];
-  skills = [];
-  langs = [];
-  user: any;
-  hobbies = [
-    {
-      icon: '<i class="fas fa-gamepad"></i>',
-      name: 'Game'
-    },
-    {
-      icon: '<i class="fas fa-music"></i>',
-      name: 'Guitar'
-    },
-    {
-      icon: '<i class="fas fa-futbol"></i>',
-      name: 'Soccer'
-    },
-    {
-      icon: `<i class="fas fa-book"></i>`,
-      name: 'Reading'
-    },
-    {
-      icon: '<i class="fas fa-pencil-ruler"></i>',
-      name: 'Drawing'
-    },
-    {
-      icon: '<i class="fas fa-palette"></i>',
-      name: 'Design'
-    },
-  ];
-
-  ngOnInit() {
-    this.getUser();
+  profileForm: FormGroup;
+  constructor(private profileService: ProfileService) {
+    this.profileForm = new FormGroup({
+      id: new FormControl(null),
+      address: new FormControl(null),
+      email: new FormControl(null),
+      fullName: new FormControl(null),
+      gender: new FormControl(null),
+      idCard: new FormControl(null),
+      password: new FormControl(null),
+      phoneNumber: new FormControl(null),
+      roleId: new FormControl(null),
+      roleName: new FormControl(null),
+    })
   }
 
-  getUser = () => {
+  ngOnInit() {
 
+  }
+
+  onSave = () => {
+    const req = {
+      ...this.profileForm.value
+    };
+    
+  }
+
+  getProfile() {
+    this.profileService.getProfile().subscribe((res: any) => {
+      this.profileForm.patchValue({
+        ...res.data
+      })
+    })
   }
 
 }
