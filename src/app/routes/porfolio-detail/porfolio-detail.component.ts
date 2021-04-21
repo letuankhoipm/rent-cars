@@ -21,6 +21,7 @@ export class PorfolioDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.id = +params['id'];
+      this.getById();
       console.log(this.id);
     });
   }
