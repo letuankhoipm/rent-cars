@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { GraphService } from 'src/app/services/graph.service';
+import { Car } from 'src/app/models/car.models';
+import { CarService } from 'src/app/services/car.service';
 
 @Component({
   selector: 'app-porfolio-detail',
@@ -11,25 +12,22 @@ import { GraphService } from 'src/app/services/graph.service';
 export class PorfolioDetailComponent implements OnInit {
 
   public background = 'assets/images/work.jpg';
-  platforms = [];
   id: any;
   listWorks: any;
   // cardDetail: any;
-  cardDetail = {
-    carNumberPlate: '72B-14512',
-    categoryId: 1,
-    name: 'Roll Royce Phantom',
-    img: 'assets/images/c.png',
-    location: 'Las Vegas',
-    postDated: '25-11-2021',
-    rentCost: 5000,
-    status: 'Renting'
-  };
-  listImages: any;
-  constructor(private route: ActivatedRoute,) { }
+  cardDetail: Car
+  constructor(private route: ActivatedRoute, private carService: CarService) { }
 
   ngOnInit() {
-
+    this.route.params.subscribe(params => {
+      this.id = +params['id'];
+      console.log(this.id);
+    });
   }
 
+  getById() {
+    this.carService.getCarById(this.id).subscribe((res: any) => {
+      this.cardDetail = res.data;
+    })
+  }
 }
