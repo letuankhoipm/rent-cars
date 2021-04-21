@@ -13,4 +13,5 @@ export class Car {
     brandName: string;
     fuel: string;
     statusName: string;
+    contactNumber: string;
 }
