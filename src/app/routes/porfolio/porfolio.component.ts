@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Car } from 'src/app/models/car.models';
-import { GraphService } from 'src/app/services/graph.service';
+import { CarService } from 'src/app/services/car.service';
 
 @Component({
   selector: 'app-porfolio',
@@ -11,69 +11,19 @@ import { GraphService } from 'src/app/services/graph.service';
 })
 export class PorfolioComponent implements OnInit {
   websiteDesignLists: any;
-  graphicDesignLists: Car[] = [
-    {
-      carNumberPlate: '72B-14512',
-      categoryId: 1,
-      name: 'Mecedes C250 Exclusive',
-      img: 'assets/images/a.png',
-      location: 'Las Vegas',
-      postDated: '25-11-2021',
-      rentCost: 5000,
-      status: 'Renting'
-    },
-    {
-      carNumberPlate: '72B-14512',
-      categoryId: 1,
-      name: 'Ford Mustang 2020',
-      img: 'assets/images/b.png',
-      location: 'Las Vegas',
-      postDated: '25-11-2021',
-      rentCost: 5000,
-      status: 'Renting'
-    },
-    {
-      carNumberPlate: '72B-14512',
-      categoryId: 1,
-      name: 'Roll Royce Phantom',
-      img: 'assets/images/c.png',
-      location: 'Las Vegas',
-      postDated: '25-11-2021',
-      rentCost: 5000,
-      status: 'Renting'
-    },
-    {
-      carNumberPlate: '72B-14512',
-      categoryId: 1,
-      name: 'Lamboghini Aventador A1',
-      img: 'assets/images/e.png',
-      location: 'Las Vegas',
-      postDated: '25-11-2021',
-      rentCost: 5000,
-      status: 'Renting'
-    },
-    {
-      carNumberPlate: '72B-14512',
-      categoryId: 1,
-      name: 'Benley G142 RI',
-      img: 'assets/images/g.png',
-      location: 'Las Vegas',
-      postDated: '25-11-2021',
-      rentCost: 5000,
-      status: 'Renting'
-    },
-  ];
+  cars: Car[] = [];
   websiteDevelopLists = [];
   p = 1;
 
-  constructor() { }
+  constructor(private carService: CarService) { }
 
   ngOnInit() {
-    this.getAllGraphicList();
+    this.getAll();
   }
 
-  getAllGraphicList = () => {
-
+  getAll() {
+    this.carService.getAllCars().subscribe((res: any) => {
+      this.cars = res.data;
+    })
   }
-
 }

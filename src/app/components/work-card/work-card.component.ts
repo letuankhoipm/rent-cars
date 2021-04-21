@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Car } from 'src/app/models/car.models';
 
 @Component({
   selector: 'work-card',
@@ -7,14 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class WorkCardComponent implements OnInit {
 
-  @Input('card') card: any;
+  @Input('card') card: Car;
   @Input('isHidden') isHidden: boolean;
   public platforms: any;
 
   constructor() { }
 
   ngOnInit() {
-    this.platforms = this.card.platform;
+    
   }
 
 }

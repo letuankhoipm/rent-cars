@@ -1,10 +1,16 @@
 export class Car {
+    id: number;
+    ownerId: number;
     name: string;
+    statusId: number;
     carNumberPlate: string;
-    status: string;
     rentCost: number;
     postDated: string;
     location: string;
-    categoryId: number;
-    img: string;
+    brandId: number;
+    image: string;
+    ownerName: string;
+    brandName: string;
+    fuel: string;
+    statusName: string;
 }
