@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { environment } from '../environments/environment';
+import { interceptors } from './interceptors';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule, interceptors],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
