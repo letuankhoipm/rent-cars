@@ -40,7 +40,9 @@ export class BookingComponent implements OnInit {
       })
       console.log(this.id);
     });
-    this.getProfile();
+    setTimeout(() => {
+      this.getProfile();
+    }, 1000);
   }
 
   onSubmit() {
