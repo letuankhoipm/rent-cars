@@ -33,9 +33,9 @@ export class BookingComponent implements OnInit {
       this.bookingForm.patchValue({
         carId: this.id
       })
-      this.getProfile();
       console.log(this.id);
     });
+    this.getProfile();
   }
 
   onSubmit() {
