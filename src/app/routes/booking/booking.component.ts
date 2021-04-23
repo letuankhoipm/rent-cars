@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
 import { CarService } from 'src/app/services/car.service';
 import { ProfileService } from 'src/app/services/profile.service';
@@ -14,7 +14,12 @@ export class BookingComponent implements OnInit {
 
   bookingForm: FormGroup;
   id: any;
-  constructor(private carService: CarService, private route: ActivatedRoute, private profileService: ProfileService) {
+  constructor(
+    private carService: CarService,
+    private route: ActivatedRoute,
+    private profileService: ProfileService,
+    private router: Router
+  ) {
     this.bookingForm = new FormGroup({
       carId: new FormControl(null),
       email: new FormControl(null),
@@ -47,6 +52,7 @@ export class BookingComponent implements OnInit {
     console.log(req);
     this.carService.bookingCar(req).subscribe((res: any) => {
       console.log(res);
+      this.router.navigate(['/contracts'])
       window.alert("Booking success");
     })
   }
