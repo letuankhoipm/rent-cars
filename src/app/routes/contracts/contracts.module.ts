@@ -16,6 +16,9 @@ const routes: Route[] = [
   imports: [
     CommonModule,
     HeadingModule
+  ],
+  exports: [
+    ContractsComponent
   ]
 })
 export class ContractsModule { }
