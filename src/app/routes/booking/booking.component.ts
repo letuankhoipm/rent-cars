@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import * as moment from 'moment';
 import { CarService } from 'src/app/services/car.service';
+import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
   selector: 'app-booking',
@@ -13,7 +14,7 @@ export class BookingComponent implements OnInit {
 
   bookingForm: FormGroup;
   id: any;
-  constructor(private carService: CarService, private route: ActivatedRoute) {
+  constructor(private carService: CarService, private route: ActivatedRoute, private profileService: ProfileService) {
     this.bookingForm = new FormGroup({
       carId: new FormControl(null),
       email: new FormControl(null),
@@ -32,6 +33,7 @@ export class BookingComponent implements OnInit {
       this.bookingForm.patchValue({
         carId: this.id
       })
+      this.getProfile();
       console.log(this.id);
     });
   }
@@ -56,6 +58,14 @@ export class BookingComponent implements OnInit {
     };
     const result = moment.utc(raw).toISOString();
     return result;
+  }
+
+  getProfile() {
+    this.profileService.getProfile().subscribe((res: any) => {
+      this.bookingForm.patchValue({
+        ...res.data
+      })
+    })
   }
 
 }
