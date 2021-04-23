@@ -26,5 +26,11 @@ export class BearerInterceptor implements HttpInterceptor {
             });
             return next.handle(newReq);
         }
+        else {
+            const newReq = request.clone({
+                setHeaders: {},
+            });
+            return next.handle(newReq);
+        }
     }
 }
