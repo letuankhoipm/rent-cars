@@ -36,6 +36,7 @@ export class AboutMeComponent implements OnInit {
     };
     this.profileService.updateProfile(req).subscribe((res: any) => {
       console.log(res);
+      window.alert('Edit successfully')
       res ? location.reload() : null;
     })
   }
