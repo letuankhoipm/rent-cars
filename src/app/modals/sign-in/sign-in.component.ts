@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class SignInComponent implements OnInit {
   loginForm: FormGroup
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router, private ngbModal: NgbActiveModal) {
     this.loginForm = new FormGroup({
       email: new FormControl(null),
       password: new FormControl(null),
@@ -30,6 +31,7 @@ export class SignInComponent implements OnInit {
       if (res) {
         localStorage.setItem('TOKEN', res.data.access_token);
         this.router.navigate(['/']);
+        this.ngbModal.close();
       }
     })
   }
