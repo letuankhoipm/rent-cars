@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
     }
     console.log(req);
     this.authService.regis(req).subscribe((res: any) => {
-      res ? this.router.navigate(['/']) : null;
+      res ? this.router.navigate(['/login']) : null;
     })
   }
 
