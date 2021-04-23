@@ -13,6 +13,10 @@ export class CarService extends BaseService {
     return this.get(this.carEndpoint);
   }
 
+  getOwnerCar() {
+    return this.get(`${this.carEndpoint}/mycars`);
+  }
+
   getCarById(id: any) {
     return this.get(`${this.carEndpoint}/${id}`);
   }
