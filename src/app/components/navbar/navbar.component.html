@@ -25,6 +25,11 @@
                     </a>
                 </li>
                 <li *ngIf="isAuth" class="nav-item ltk-nav-link">
+                    <a class="nav-link p-0" [routerLink]="['/contracts']">
+                        My Contracts
+                    </a>
+                </li>
+                <li *ngIf="isAuth" class="nav-item ltk-nav-link">
                     <a class="nav-link p-0" [routerLink]="['/about-me']">
                         {{username}}
                     </a>
