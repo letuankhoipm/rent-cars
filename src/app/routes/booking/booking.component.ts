@@ -28,7 +28,7 @@ export class BookingComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.id = +params['id'];
+      this.id = +params['carId'];
       this.bookingForm.patchValue({
         carId: this.id
       })
