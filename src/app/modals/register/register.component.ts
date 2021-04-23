@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class RegisterComponent implements OnInit {
 
   regisForm: FormGroup;
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router, private ngbModal: NgbActiveModal) {
     this.regisForm = new FormGroup({
       address: new FormControl(null),
       email: new FormControl(null),
@@ -34,6 +35,8 @@ export class RegisterComponent implements OnInit {
     console.log(req);
     this.authService.regis(req).subscribe((res: any) => {
       res ? this.router.navigate(['/login']) : null;
+      window.alert('Registration successfully')
+      this.ngbModal.close();
     })
   }
 
