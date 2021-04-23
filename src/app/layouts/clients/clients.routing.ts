@@ -23,6 +23,10 @@ const routes: Routes = [
                 path: 'about-me',
                 loadChildren: '../../routes/about-me/about-me.module#AboutMeModule'
             },
+            {
+                path: 'booking',
+                loadChildren: '../../routes/booking/booking.module#BookingModule'
+            },
         ]
     },
     {

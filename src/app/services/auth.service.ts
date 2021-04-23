@@ -12,6 +12,6 @@ export class AuthService extends BaseService {
   }
 
   regis(body) {
-    return this.post(body, `${environment.API_URL}/register`)
+    return this.post(body, `${environment.API_URL}/user/register`)
   }
 }
