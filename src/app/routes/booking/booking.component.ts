@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import * as moment from 'moment';
 import { CarService } from 'src/app/services/car.service';
 
@@ -11,7 +12,8 @@ import { CarService } from 'src/app/services/car.service';
 export class BookingComponent implements OnInit {
 
   bookingForm: FormGroup;
-  constructor(private carService: CarService) {
+  id: any;
+  constructor(private carService: CarService, private route: ActivatedRoute) {
     this.bookingForm = new FormGroup({
       carId: new FormControl(null),
       email: new FormControl(null),
@@ -25,6 +27,13 @@ export class BookingComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.id = +params['id'];
+      this.bookingForm.patchValue({
+        carId: this.id
+      })
+      console.log(this.id);
+    });
   }
 
   onSubmit() {
