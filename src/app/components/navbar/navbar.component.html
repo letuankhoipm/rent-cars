@@ -34,6 +34,11 @@
                         Profile
                     </a>
                 </li>
+                <li *ngIf="isAuth" class="nav-item ltk-nav-link">
+                    <a (click)="onLogout()" class="nav-link p-0">
+                        Logout
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>

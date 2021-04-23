@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HostListener, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(@Inject(PLATFORM_ID) public platformId: string) { }
+  constructor(@Inject(PLATFORM_ID) public platformId: string, private router: Router) { }
 
   public scrolled = false;
   public isAuth = false;
@@ -57,7 +58,11 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-
+  onLogout() {
+    localStorage.clear();
+    this.router.navigate(['/'])
+    location.reload();
+  }
 
 
 }
