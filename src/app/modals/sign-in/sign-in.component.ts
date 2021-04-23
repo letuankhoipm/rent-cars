@@ -30,8 +30,13 @@ export class SignInComponent implements OnInit {
     this.authService.login(req).subscribe((res: any) => {
       if (res) {
         localStorage.setItem('TOKEN', res.data.access_token);
+        localStorage.setItem('USERNAME', res.data.username);
         this.router.navigate(['/']);
+        window.alert('Login successfully')
         this.ngbModal.close();
+        setTimeout(() => {
+          location.reload();
+        }, 1000);
       }
     })
   }
