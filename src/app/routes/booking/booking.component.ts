@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import * as moment from 'moment';
+import { CarService } from 'src/app/services/car.service';
 
 @Component({
   selector: 'app-booking',
@@ -10,7 +11,7 @@ import * as moment from 'moment';
 export class BookingComponent implements OnInit {
 
   bookingForm: FormGroup;
-  constructor() {
+  constructor(private carService: CarService) {
     this.bookingForm = new FormGroup({
       carId: new FormControl(null),
       email: new FormControl(null),
@@ -33,6 +34,10 @@ export class BookingComponent implements OnInit {
       endDate: this.formatDate(this.bookingForm.value.endDate),
     }
     console.log(req);
+    this.carService.bookingCar(req).subscribe((res: any) => {
+      console.log(res);
+      window.alert("Booking success");
+    })
   }
 
   formatDate(date) {

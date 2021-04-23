@@ -6,7 +6,8 @@ import { BaseService } from './base.service';
   providedIn: 'root'
 })
 export class CarService extends BaseService {
-  public carEndpoint = `${environment.API_URL}/cars`
+  public carEndpoint = `${environment.API_URL}/cars`;
+  public bookingEndpoint = `${environment.API_URL}/contracts`
 
   getAllCars() {
     return this.get(this.carEndpoint);
@@ -14,5 +15,9 @@ export class CarService extends BaseService {
 
   getCarById(id: any) {
     return this.get(`${this.carEndpoint}/${id}`);
+  }
+
+  bookingCar(body: any) {
+    return this.post(body, this.bookingEndpoint);
   }
 }
