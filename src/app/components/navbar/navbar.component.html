@@ -24,7 +24,12 @@
                         Login/Sing-up
                     </a>
                 </li>
-                <li *ngIf="isAuth" class="nav-item ltk-nav-link">
+                <li *ngIf="role == 'ROLE_OWNER'" class="nav-item ltk-nav-link">
+                    <a class="nav-link p-0" [routerLink]="['/contracts']">
+                        My Cars
+                    </a>
+                </li>
+                <li *ngIf="role == 'ROLE_CUSTOMER'" class="nav-item ltk-nav-link">
                     <a class="nav-link p-0" [routerLink]="['/contracts']">
                         My Contracts
                     </a>

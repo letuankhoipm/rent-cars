@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit {
   public stretching = false;
   public ltkLogo = 'assets/logo/las.png';
   username;
+  role;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -52,6 +53,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     const TOKEN = localStorage.getItem('TOKEN');
     this.username = localStorage.getItem('USERNAME');
+    this.role = localStorage.getItem('ROLE');
     if (TOKEN) {
       this.isAuth = true;
     }

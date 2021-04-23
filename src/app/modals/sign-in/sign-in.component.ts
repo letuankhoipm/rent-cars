@@ -31,6 +31,7 @@ export class SignInComponent implements OnInit {
       if (res) {
         localStorage.setItem('TOKEN', res.data.access_token);
         localStorage.setItem('USERNAME', res.data.username);
+        localStorage.setItem('ROLE', res.data.roleName);
         this.router.navigate(['/']);
         window.alert('Login successfully')
         this.ngbModal.close();
