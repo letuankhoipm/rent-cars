@@ -18,11 +18,13 @@ export class BearerInterceptor implements HttpInterceptor {
         request: HttpRequest<any>,
         next: HttpHandler
     ): Observable<HttpEvent<any>> {
-        const newReq = request.clone({
-            setHeaders: {
-                Authorization: 'Bearer ' + this.token,
-            },
-        });
-        return next.handle(newReq);
+        if (this.token) {
+            const newReq = request.clone({
+                setHeaders: {
+                    Authorization: 'Bearer ' + this.token,
+                },
+            });
+            return next.handle(newReq);
+        }
     }
 }
